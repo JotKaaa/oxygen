@@ -1,0 +1,1375 @@
+/*
+font-family: 'Raleway', sans-serif;
+font-family: 'Open Sans Condensed', sans-serif;
+font-family: 'Meddon', cursive;
+font-family: 'Slabo 27px', serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Open Sans', sans-serif;
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* -----------------------------------ANIMATION------------------------------------------- */
+
+.entryWrap {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* div.firstPart p.hugeTxt {
+    opacity: 1;
+    position: fixed;
+    top: 35%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    font-size: 90px;
+    transform:  rotate(-60deg);
+    color: red; 
+}  */
+
+/* div.firstPart {
+  position: relative;
+  flex-basis: 100%;
+  flex-grow: 1;
+  background-color: red;
+  width: 100%;
+  z-index: 10;
+} */
+
+/* div.firstPart li {
+  position: absolute;
+  top: 13%;
+  left: 43%;
+  list-style: none;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  background-color: black;
+  border: hidden;
+  cursor: pointer;
+  font-family: "Raleway", sans-serif;
+  transition: 0.4s linear;
+  color: white;
+}
+
+div.firstPart li a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+
+div.firstPart li:hover {
+  background-color: red;
+  border: 2px solid red;
+} */
+
+/* .firstPart button:hover p {
+    color: red;
+} */
+
+.animation {
+  position: absolute;
+  top: 50%;
+  left: 42%;
+  width: 540px;
+  height: 302px;
+  transform: translate(-50%, -50%);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+  /* background-image: url("slides/18_grey_small_circle.png"); */
+}
+
+.discrimination {
+  position: absolute;
+  top: 27.5%;
+  left: 48%;
+  font-family: "Slabo 27px", serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.breathe {
+  position: absolute;
+  top: 72.5%;
+  left: 57.5%;
+  font-family: "Slabo 27px", serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  overflow: hidden;
+  opacity: 0;
+  z-index: -6;
+  animation: breatheAppear 1s 4s linear forwards,
+    breatheDisappear 2s 10s linear forwards;
+}
+@keyframes breatheAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+p.dotts {
+  position: absolute;
+  top: 72.5%;
+  left: 69%;
+  z-index: -6;
+  font-weight: bold;
+}
+
+span:nth-child(1) {
+  animation: dot1 3s 5.5s linear infinite;
+}
+span:nth-child(2) {
+  animation: dot2 3s 5.5s linear infinite;
+}
+span:nth-child(3) {
+  animation: dot3 3s 5.5s linear infinite;
+}
+
+@keyframes dot1 {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 0;
+  }
+  18% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  93% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes dot2 {
+  0% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 0;
+  }
+  38% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  93% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes dot3 {
+  0% {
+    opacity: 0;
+  }
+  64% {
+    opacity: 0;
+  }
+  67% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  93% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.dotts::after {
+  position: absolute;
+  top: 15%;
+  left: -350%;
+  width: 450%;
+  height: 12px;
+  content: "";
+  opacity: 0;
+  z-index: 1;
+  background-color: rgb(255, 255, 255);
+  animation: breatheCover 1s 10s linear forwards;
+}
+
+@keyframes breatheCover {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.dotts::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgb(255, 255, 255);
+  animation: breatheOut 4s 3s linear forwards;
+  opacity: 1;
+  animation: uncoveringDotts 0.1s 5.5s linear forwards;
+  z-index: 1;
+}
+
+@keyframes uncoveringDotts {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (min-width: 381px) {
+  .peopleAndPerson img {
+    opacity: 1;
+    height: 302px;
+    animation: coveringPeopleAndPerson 2s 10s linear forwards;
+    z-index: 3;
+  }
+}
+
+@media (max-width: 380px) {
+  .peopleAndPerson img {
+    opacity: 1;
+    height: 302px;
+    animation: coveringPeopleAndPerson 2s 10s linear forwards;
+    z-index: 3;
+  }
+}
+
+@keyframes coveringPeopleAndPerson {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.peopleCover img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  height: 302px;
+  animation: peoplesHands 10s 1.5s linear forwards;
+}
+
+@keyframes peoplesHands {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.firstCircle img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 302px;
+  z-index: -6;
+  opacity: 0;
+  animation: firstCircleAppears 2.5s 11s linear forwards;
+}
+
+@keyframes firstCircleAppears {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.two img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 302px;
+  z-index: 3;
+  opacity: 0;
+  animation: twoAppears 3s 7.5s linear forwards;
+}
+
+@keyframes twoAppears {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.firstCircle::before {
+  position: absolute;
+  top: 28%;
+  left: 47%;
+  content: "";
+  width: 25%;
+  height: 8%;
+  background: rgb(255, 255, 255);
+  opacity: 1;
+  z-index: 1;
+  animation: discriminationCover 11s 0s linear forwards;
+}
+
+@keyframes discriminationCover {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.firstCircleCover div:nth-child(1) {
+  position: absolute;
+  top: 16%;
+  left: 37%;
+  content: "";
+  width: 9%;
+  height: 30%;
+  background: rgb(255, 255, 255);
+  opacity: 0;
+  z-index: 1;
+  animation: circleUncoveringSquares 0.15s 11s linear forwards;
+}
+.firstCircleCover div:nth-child(2) {
+  position: absolute;
+  top: 41%;
+  left: 37%;
+  content: "";
+  width: 9%;
+  height: 25%;
+  background: rgb(255, 255, 255);
+  opacity: 0;
+  z-index: 1;
+  transform: skewY(-30deg);
+  animation: circleUncoveringSquares 0.3s 11s linear forwards;
+}
+.firstCircleCover div:nth-child(3) {
+  position: absolute;
+  top: 59%;
+  left: 37%;
+  content: "";
+  width: 22.5%;
+  height: 37%;
+  background: rgb(255, 255, 255);
+  opacity: 0;
+  z-index: 1;
+  transform: skewY(-30deg);
+  animation: circleUncoveringSquares 0.45s 11s linear forwards;
+}
+.firstCircleCover div:nth-child(4) {
+  position: absolute;
+  top: 61%;
+  left: 59%;
+  content: "";
+  width: 25%;
+  height: 36%;
+  background: rgb(255, 255, 255);
+  opacity: 0;
+  z-index: 1;
+  transform: skewY(30deg);
+  animation: circleUncoveringSquares 0.6s 11s linear forwards;
+}
+.firstCircleCover div:nth-child(5) {
+  position: absolute;
+  top: 34%;
+  left: 72%;
+  content: "";
+  width: 13%;
+  height: 35%;
+  background: rgb(255, 255, 255);
+  opacity: 0;
+  z-index: 1;
+  transform: skewY(30deg);
+  animation: circleUncoveringSquares 0.75s 11s linear forwards;
+}
+.firstCircleCover div:nth-child(6) {
+  position: absolute;
+  top: 0%;
+  left: 72%;
+  content: "";
+  width: 13%;
+  height: 40%;
+  background: rgba(255, 255, 255);
+  opacity: 0;
+  z-index: 1;
+  animation: circleUncoveringSquares 0.9s 11s linear forwards;
+}
+.firstCircleCover div:nth-child(7) {
+  position: absolute;
+  top: 0%;
+  left: 59%;
+  content: "";
+  width: 13%;
+  height: 16%;
+  background: rgb(255, 255, 255);
+  opacity: 0;
+  z-index: 1;
+  animation: circleUncoveringSquares 1.05s 11s linear forwards;
+}
+.firstCircleCover div:nth-child(8) {
+  position: absolute;
+  top: 0%;
+  left: 37%;
+  content: "";
+  width: 22%;
+  height: 16%;
+  background: rgb(255, 255, 255);
+  opacity: 0;
+  z-index: 1;
+  animation: circleUncoveringSquares 1.2s 11s linear forwards;
+}
+
+@keyframes circleUncoveringSquares {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.secondCircle img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 302px;
+  z-index: -5;
+  opacity: 0;
+  animation: secondCircleAppears 1.5s 12s linear forwards;
+}
+
+@keyframes secondCircleAppears {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.9;
+  }
+  40% {
+    opacity: 0.9;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.thirdCircle img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 302px;
+  z-index: -5;
+  opacity: 0;
+  animation: thirdCircleAppears 1.5s 12.5s linear forwards;
+}
+
+@keyframes thirdCircleAppears {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.fourthCircle img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 302px;
+  z-index: -5;
+  opacity: 0;
+  animation: fourthCircleAppears 1.5s 13s linear forwards;
+}
+
+@keyframes fourthCircleAppears {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.9;
+  }
+  60% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.greyBigCircle img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 302px;
+  z-index: -6;
+  opacity: 0;
+  animation: greyBigCircleAppears 1.5s 13.5s linear forwards;
+}
+
+@keyframes greyBigCircleAppears {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.person img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  height: 302px;
+  z-index: 2;
+  animation: person 2.5s 15s linear forwards;
+}
+
+@keyframes person {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.oxygen {
+  position: absolute;
+  top: 25%;
+  left: 36%;
+  font-family: "meddon", "serif";
+  font-size: 289%;
+  opacity: 0;
+  z-index: 2;
+  animation: oxygenAppears 2.5s 15s linear forwards;
+}
+
+@keyframes oxygenAppears {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.oxygen::before {
+  position: absolute;
+  top: 12%;
+  left: 13%;
+  font-family: "Slabo 27px", "serif";
+  font-size: 12px;
+  content: "anti-discrimination";
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  /* background-color: rgba(161, 82, 82, 0.5); */
+  opacity: 0;
+  animation: antiDisTrainingsAppear 1.5s 16.5s linear forwards;
+}
+
+.oxygen::after {
+  position: absolute;
+  top: 103%;
+  left: 32.5%;
+  font-family: "Slabo 27px", "serif";
+  font-size: 12px;
+  content: "trainings";
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0;
+  /* background-color: rgba(161, 82, 82, 0.5); */
+  animation: antiDisTrainingsAppear 1.5s 16.5s linear forwards;
+}
+
+@keyframes antiDisTrainingsAppear {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.greySmallCircle img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 302px;
+  z-index: -8;
+  opacity: 0;
+  animation: greySmallCircleAppears 3.5s 18s linear forwards;
+}
+
+@keyframes greySmallCircleAppears {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.secondCircleCover div:nth-child(1) {
+  position: absolute;
+  top: 83%;
+  left: 92%;
+  content: "";
+  width: 13%;
+  height: 20%;
+  background: rgb(255, 255, 255);
+  opacity: 0;
+  z-index: -7;
+  transform: skewY(50deg);
+  animation: smallCircleUncoveringSquares 0.05s 18s linear forwards;
+}
+.secondCircleCover div:nth-child(2) {
+  position: absolute;
+  top: 86%;
+  left: 86%;
+  content: "";
+  width: 9%;
+  height: 23%;
+  background: rgba(255, 255, 255);
+  opacity: 0;
+  z-index: -7;
+  transform: skewY(50deg);
+  animation: smallCircleUncoveringSquares 0.1s s linear forwards;
+}
+.secondCircleCover div:nth-child(3) {
+  position: absolute;
+  top: 86%;
+  left: 77.5%;
+  content: "";
+  width: 9%;
+  height: 23%;
+  background: rgba(255, 255, 255);
+  opacity: 0;
+  z-index: -7;
+  transform: skewY(-50deg);
+  animation: smallCircleUncoveringSquares 0.15s 18s linear forwards;
+}
+.secondCircleCover div:nth-child(4) {
+  position: absolute;
+  top: 72%;
+  left: 72%;
+  content: "";
+  width: 8%;
+  height: 27.5%;
+  background: rgba(255, 255, 255);
+  opacity: 0;
+  z-index: -7;
+  transform: skewY(-50deg);
+  animation: smallCircleUncoveringSquares 0.2s 18s linear forwards;
+}
+.secondCircleCover div:nth-child(5) {
+  position: absolute;
+  top: 68%;
+  left: 72%;
+  content: "";
+  width: 8%;
+  height: 10%;
+  background: rgba(255, 255, 255);
+  opacity: 0;
+  z-index: -7;
+  animation: smallCircleUncoveringSquares 0.25s 18s linear forwards;
+}
+.secondCircleCover div:nth-child(6) {
+  position: absolute;
+  top: 55%;
+  left: 72%;
+  content: "";
+  width: 10%;
+  height: 13.5%;
+  background: rgba(255, 255, 255);
+  opacity: 0;
+  z-index: -7;
+  animation: smallCircleUncoveringSquares 0.3s 18s linear forwards;
+}
+.secondCircleCover div:nth-child(7) {
+  position: absolute;
+  top: 39%;
+  left: 76%;
+  content: "";
+  width: 10%;
+  height: 27%;
+  background: rgba(255, 255, 255);
+  transform: skewY(50deg);
+  opacity: 0;
+  z-index: -7;
+  animation: smallCircleUncoveringSquares 0.35s 18s linear forwards;
+}
+.secondCircleCover div:nth-child(8) {
+  position: absolute;
+  top: 39%;
+  left: 86%;
+  content: "";
+  width: 10%;
+  height: 27%;
+  background: rgba(255, 255, 255);
+  transform: skewY(-50deg);
+  opacity: 0;
+  z-index: -7;
+  animation: smallCircleUncoveringSquares 0.4s 18s linear forwards;
+}
+.secondCircleCover div:nth-child(9) {
+  position: absolute;
+  top: 50%;
+  left: 92%;
+  content: "";
+  width: 13%;
+  height: 21%;
+  background: rgba(255, 255, 255);
+  transform: skewY(-50deg);
+  opacity: 0;
+  z-index: -7;
+  animation: smallCircleUncoveringSquares 0.45s 18s linear forwards;
+}
+.secondCircleCover div:nth-child(10) {
+  position: absolute;
+  top: 68%;
+  left: 92%;
+  content: "";
+  width: 13%;
+  height: 15%;
+  background: rgba(255, 255, 255);
+  opacity: 0;
+  z-index: -7;
+  animation: smallCircleUncoveringSquares 0.5s 18s linear forwards;
+}
+
+@keyframes smallCircleUncoveringSquares {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.btnStart img {
+  position: absolute;
+  top: -60%;
+  left: -69%;
+  height: 302px;
+  transform: scale(2.5, 2.55);
+}
+
+/* ------------------------------------ABOUT-------------------------------------------- */
+
+.wrapAbout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 200vh;
+  color: rgb(116, 116, 116);
+  font-family: "Open Sans", sans-serif;
+  margin: 10px;
+}
+
+.mainMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.mainMenu ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  align-items: center;
+  margin-top: 10px;
+
+  /* background-color: rgba(255, 255, 255, 0.9); */
+}
+.mainMenu ul li {
+  flex-basis: 100%;
+  border-bottom: 1px solid rgb(185, 193, 196);
+}
+
+.mainMenu ul li a {
+  display: block;
+  color: rgb(24, 23, 23);
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 15px;
+  transition: 0.4s linear;
+}
+.mainMenu ul li a:hover {
+  letter-spacing: 1px;
+}
+
+header {
+  display: flex;
+  /* background-color: rgb(236, 232, 232); */
+  flex-direction: column;
+  width: 100%;
+  /* min-width: 320px; */
+  max-width: 1024px;
+  margin-top: 195px;
+  text-align: center;
+  min-height: 35vh;
+  /* overflow: hidden; */
+}
+
+.partOneHeader {
+  position: relative;
+  flex-grow: 1;
+  /* background-color: red; */
+  flex-basis: 300px;
+  z-index: -1;
+}
+
+.firstWindow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(219, 227, 231);
+  height: 235px;
+  width: 235px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.secondWindow {
+  display: none;
+}
+.thirdWindow {
+  display: none;
+}
+
+.partTwoHeader {
+  flex-grow: 1;
+  /* min-width: 150px; */
+  /* background-color: yellow; */
+  background-image: url("imgs/logo_small.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  order: -1;
+  flex-basis: 250px;
+  /* z-index: -1; */
+}
+
+.partTwoHeader p {
+  display: none;
+}
+
+.partThreeHeader {
+  display: none;
+  flex-grow: 1;
+  background-color: green;
+  flex-basis: 30px;
+}
+
+.aboutSection {
+  display: flex;
+  flex-direction: column;
+  /* background-color: rgb(162, 216, 162); */
+  flex-grow: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 20px;
+}
+
+.mainAboutTxt p {
+  /* background-color: yellow; */
+  padding: 10px 0;
+  font-family: "open sans", serif;
+  /* background-color: pink; */
+  min-height: 5vh;
+}
+
+.middle {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  /* background-color: yellow; */
+  width: 100%;
+  max-width: 1200px;
+}
+
+main {
+  /* background-color: rgba(185, 194, 60, 0.7); */
+  flex-grow: 1;
+  padding-top: 15px;
+  margin-bottom: 67px;
+  color: white;
+}
+
+aside {
+  /* background-color: rgba(125, 165, 170, 0.7); */
+  min-height: 35vh;
+  padding-top: 15px;
+  order: -1;
+}
+
+.emergencyNr {
+  position: relative;
+  bottom: 0;
+  right: 0;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-color: rgba(128, 255, 244, 1);
+  color: rgba(32, 35, 36, 0.7);
+}
+
+.emergencyNr p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 9px;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.emergencyCall {
+  position: relative;
+  bottom: 0;
+  right: 0;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: rgba(128, 255, 244, 1);
+  color: rgba(125, 165, 170, 0.7);
+}
+
+.emergencyCall p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 9px;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+}
+
+.webDescription p {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: rgb(24, 23, 23);
+  background-color: rgba(255, 255, 255, 0.9);
+  font-family: "Raleway", sans-serif;
+  text-decoration: none;
+  text-align: center;
+  font-size: 16px;
+  padding: 20px;
+  transition: 0.4s linear;
+}
+
+@media (min-width: 533px) {
+  .partTwoHeader {
+    position: relative;
+    /* background-color: red; */
+  }
+  .partTwoHeader .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .mainMenu ul {
+    flex-direction: row;
+  }
+
+  .mainMenu ul li {
+    flex-basis: 100%;
+    border-bottom: 1px solid rgb(255, 255, 255);
+  }
+
+  .mainMenu ul li:nth-of-type(1) a {
+    text-align: left;
+  }
+
+  .mainMenu ul li:nth-of-type(2) a {
+    text-align: left;
+  }
+
+  .mainMenu ul li:nth-of-type(3) a {
+    text-align: right;
+  }
+  .mainMenu ul li:nth-of-type(4) a {
+    text-align: right;
+  }
+
+  header {
+    flex-direction: row;
+    margin-top: 48px;
+    max-width: 1200px;
+    min-height: 300px;
+    margin-bottom: -68px;
+  }
+
+  .mainAboutTxt p {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: "Slabo 27px", serif;
+    font-weight: 600;
+    letter-spacing: 1.6px;
+    padding: 0 0 5px 0;
+  }
+
+  .partTwoHeader {
+    position: relative;
+    flex-grow: 1;
+    /* min-width: 150px; */
+    top: 0;
+    left: 0;
+    background-image: url("imgs/logo_small.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    order: -1;
+    flex-basis: 250px;
+    /* z-index: -1; */
+  }
+
+  .middle {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    /* background-color: yellow; */
+    width: 100%;
+    max-width: 1200px;
+    padding-top: 35px;
+  }
+
+  main {
+    flex-grow: 1;
+    margin-bottom: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  main p:nth-child(1) {
+    font-size: 20px;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 700;
+    letter-spacing: 0px;
+  }
+
+  main p:nth-child(2) {
+    font-size: 12px;
+    font-family: "Open Sans ", sans-serif;
+    letter-spacing: 0.5px;
+  }
+
+  /*
+font-family: 'Raleway', sans-serif;
+font-family: 'Open Sans Condensed', sans-serif;
+font-family: 'Meddon', cursive;
+font-family: 'Slabo 27px', serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Open Sans', sans-serif;
+*/
+
+  aside {
+    min-width: 45%;
+    margin-bottom: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    order: 0;
+  }
+}
+
+@media (min-width: 640px) {
+  .mainMenu ul {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 10px;
+  }
+  header {
+    flex-direction: row;
+    margin-top: 48px;
+    max-width: 1200px;
+    min-height: 300px;
+  }
+  /* .partOneHeader {
+            flex-basis: 600px;
+            background: #000;
+        } */
+
+  .firstWindow {
+    /* width: 100%;
+            border-radius: 50%;
+            margin: 0 auto; */
+
+    position: absolute;
+    top: 50%;
+    left: calc(100% - 145px);
+    transform: translate(-50%, -50%);
+    background-color: grey;
+    height: 290px;
+    width: 290px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .secondWindow {
+    display: block;
+    position: absolute;
+    top: 10%;
+    left: 7%;
+    /* transform: translate(50%); */
+    background-color: grey;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    transform: scale(-1, 1);
+    overflow: hidden;
+  }
+
+  .partTwoHeader {
+    position: relative;
+    flex-basis: 600px;
+    background-position: right;
+    background-image: url("imgs/logo_small.png");
+    /* background-color: rgb(235, 142, 142); */
+  }
+
+  .thirdWindow {
+    display: block;
+    position: absolute;
+    top: 1%;
+    right: 5%;
+    background-color: grey;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .partThreeHeader {
+    flex-grow: 1;
+
+    flex-basis: 30px;
+  }
+  .aboutSection {
+    /* background-color:rgba(162, 216, 162, .5); */
+    flex-grow: 1;
+    width: 100%;
+    max-width: 1200px;
+  }
+
+  .emergencyNr {
+    position: fixed;
+    bottom: 60px;
+    right: 26%;
+    height: 270px;
+    width: 270px;
+    border-radius: 50%;
+    background-color: rgba(128, 255, 244, 0.8);
+    color: rgba(32, 35, 36, 0.7);
+    z-index: 12;
+  }
+
+  .emergencyNr p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .emergencyCall {
+    position: fixed;
+    bottom: 170px;
+    right: 17%;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: rgba(128, 255, 244, 0.8);
+    color: rgba(49, 54, 54, 0.7);
+    z-index: 12;
+  }
+
+  .emergencyCall p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+  }
+}
+
+@media (max-width: 1025px) and (orientation: landscape) {
+  header {
+    flex-direction: row;
+    margin-top: 48px;
+    max-width: 2000px;
+  }
+  .mainMenu ul {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 10px;
+  }
+  .firstWindow {
+    position: absolute;
+    top: 50%;
+    left: calc(100% - 145px);
+    transform: translate(-50%, -50%);
+    background-color: grey;
+    height: 290px;
+    width: 290px;
+    border-radius: 50%;
+  }
+}
+
+.webDescription p {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: rgb(24, 23, 23);
+  background-color: rgba(255, 255, 255, 0.9);
+  font-family: "Raleway", sans-serif;
+  text-decoration: none;
+  text-align: center;
+  font-size: 16px;
+  padding: 20px;
+  transition: 0.4s linear;
+}
+
+/*
+font-family: 'Raleway', sans-serif;
+font-family: 'Open Sans Condensed', sans-serif;
+font-family: 'Meddon', cursive;
+font-family: 'Slabo 27px', serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Open Sans', sans-serif;
+*/
