@@ -704,9 +704,9 @@ font-family: 'Open Sans', sans-serif;
   aside {
     position: fixed;
     top: 0;
-    left: -95px;
+    left: -85px;
     bottom: 0;
-    width: 95px;
+    width: 85px;
     background-color: rgb(229, 233, 235);
     transition: 0.3s linear;
     overflow: hidden;
@@ -1815,7 +1815,7 @@ font-family: 'Open Sans', sans-serif;
 
 /* ----------ANIMATION------------ */
 
-@media (min-width: 640px) {
+@media (min-width: 641px) {
   .wrapMobile {
     display: none;
   }
@@ -1857,13 +1857,13 @@ font-family: 'Open Sans', sans-serif;
 .animation {
   position: fixed;
   top: 50%;
-  left: 42%;
+  left: 50%;
   width: 540px;
   height: 302px;
-  transform: translate(-50%, -50%);
+  transform: translate(-61%, -50%);
   background-repeat: no-repeat;
   background-size: contain;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.2);
   overflow: hidden;
   margin: 0 60px 0 5px;
   /* background-image: url("slides/18_grey_small_circle.png"); */
