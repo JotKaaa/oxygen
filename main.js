@@ -31,10 +31,14 @@ const indexTyping = setInterval(discriminationAddLetter, 100);
 // -----------------Menu mobile--------------------
 
 const burger = document.querySelector(".burger");
+const aboutContainer = document.querySelector(".aboutContainer");
 
 burger.addEventListener("click", function () {
   burger.classList.toggle("active");
+  aboutContainer.classList.toggle("active");
 });
+
+// --------------footer mobile landscape -------------
 
 // ---------------Nav Slider -----------------
 

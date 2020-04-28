@@ -18,14 +18,10 @@ font-family: 'Open Sans', sans-serif;
 /* ---------LOGO PICTURE--------- */
 
 @media (orientation: portrait) and (max-width: 360px) {
-  .animationMobile {
-    display: none;
-  }
-
   .wrapMobile {
     display: block;
   }
-  .wrap {
+  .animatedLogoPart {
     display: none;
   }
 
@@ -59,11 +55,11 @@ font-family: 'Open Sans', sans-serif;
 
   aside {
     position: fixed;
-    top: -20vh;
+    top: -50%;
     left: 0;
     width: 100%;
     min-width: 320px;
-    height: 17vh;
+    height: 15vh;
     background-color: rgb(229, 233, 235);
     transition: 0.3s linear;
     z-index: 3;
@@ -83,8 +79,9 @@ font-family: 'Open Sans', sans-serif;
 
   aside nav.mainMenuMobile li:nth-child(1) a {
     position: absolute;
-    top: 12%;
-    left: 4.5%;
+    top: 50%;
+    left: 14%;
+    transform: translate(-50%, -50%);
     display: block;
     width: 63px;
     height: 63px;
@@ -93,70 +90,7 @@ font-family: 'Open Sans', sans-serif;
     border: 1px solid rgb(219, 219, 219);
     background-color: #fff;
     border-radius: 50%;
-    transform: rotate(0deg);
-    /* animation: flyAbout 20s linear infinite; */
   }
-
-  @keyframes flyAbout {
-    0% {
-      top: 41%;
-      transform: rotate(0deg);
-    }
-    10% {
-      top: 41%;
-      transform: rotate(0deg);
-    }
-    20% {
-      top: 28%;
-      transform: rotate(30deg);
-    }
-    30% {
-      top: 10%;
-      transform: rotate(-10deg);
-    }
-    35% {
-      transform: rotate(0deg);
-    }
-    40% {
-      transform: rotate(0deg);
-    }
-    50% {
-      top: 41%;
-    }
-    54% {
-      top: 36%;
-    }
-    58% {
-      top: 41%;
-    }
-    60% {
-      top: 38%;
-    }
-    62% {
-      top: 41%;
-    }
-
-    100% {
-      top: 41%;
-    }
-  }
-
-  /* aside nav.mainMenuMobile li:nth-child(1) a::after {
-    position: relative;
-    top: -44%;
-    left: 31%;
-    content: "";
-    display: block;
-    border: 1px solid rgb(219, 219, 219);
-    background-color: #fff;
-    width: 23px;
-    height: 23px;
-    border-radius: 50%;
-    font-size: 12px;
-    color: black;
-    text-align: center;
-    line-height: 23px;
-  } */
 
   aside nav.mainMenuMobile li:nth-child(1) a:hover {
     cursor: pointer;
@@ -164,8 +98,9 @@ font-family: 'Open Sans', sans-serif;
 
   aside nav.mainMenuMobile li:nth-child(2) a {
     position: absolute;
-    top: 6.5%;
-    left: 26%;
+    top: 50%;
+    left: 36%;
+    transform: translate(-50%, -50%);
     display: block;
     width: 74px;
     height: 74px;
@@ -182,8 +117,9 @@ font-family: 'Open Sans', sans-serif;
 
   aside nav.mainMenuMobile li:nth-child(3) a {
     position: absolute;
-    top: 20.5%;
-    left: 48.5%;
+    top: 50%;
+    left: 58.5%;
+    transform: translate(-50%, -50%);
     display: block;
     width: 58px;
     height: 58px;
@@ -201,8 +137,9 @@ font-family: 'Open Sans', sans-serif;
 
   aside nav.mainMenuMobile li:nth-child(4) a {
     position: absolute;
-    top: 10%;
-    left: 74.5%;
+    top: 50%;
+    left: 84%;
+    transform: translate(-50%, -50%);
     display: block;
     width: 63px;
     height: 63px;
@@ -216,46 +153,46 @@ font-family: 'Open Sans', sans-serif;
 
   @keyframes flyContact {
     0% {
-      top: 11%;
-      transform: rotate(0deg);
+      top: 50%;
+      transform: rotate(0deg) translate(-50%, -50%);
     }
     10% {
-      top: 11%;
-      transform: rotate(0deg);
+      top: 50%;
+      transform: rotate(0deg) translate(-50%, -50%);
     }
     20% {
-      top: 24%;
-      transform: rotate(20deg);
+      top: 74%;
+      transform: rotate(20deg) translate(-50%, -50%);
     }
     30% {
-      top: 11%;
-      transform: rotate(-20deg);
+      top: 50%;
+      transform: rotate(-20deg) translate(-50%, -50%);
     }
     35% {
-      transform: rotate(-10deg);
+      transform: rotate(-10deg) translate(-50%, -50%);
     }
     40% {
-      transform: rotate(0deg);
+      transform: rotate(0deg) translate(-50%, -50%);
     }
     50% {
-      top: 40%;
+      top: 65%;
     }
     54% {
-      top: 36%;
+      top: 50%;
     }
     58% {
-      top: 40%;
+      top: 70%;
     }
     68% {
-      top: 30%;
+      top: 55%;
     }
 
     78% {
-      top: 11%;
+      top: 50%;
     }
 
     100% {
-      top: 11%;
+      top: 50%;
     }
   }
 
@@ -298,7 +235,7 @@ font-family: 'Open Sans', sans-serif;
     position: relative;
     margin-top: 100vh;
     min-height: 100vh;
-    background-color: rgb(63, 130, 175);
+    background-color: rgb(255, 255, 255);
     z-index: 2;
   }
 
@@ -323,13 +260,84 @@ font-family: 'Open Sans', sans-serif;
     z-index: 2;
   }
 
+  /* ---------------s1---------------- */
+
+  .aboutContainer {
+    display: flex;
+    flex-direction: column;
+    /* background-color: pink; */
+    height: 100vh;
+    min-width: 290px;
+    transition: 0.3s linear;
+  }
+
+  .aboutContainer.active {
+    padding-top: 15vh;
+  }
+
+  .aboutPic {
+    position: relative;
+    flex-basis: 50vh;
+  }
+
+  .aboutPic div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    height: 200px;
+    width: 200px;
+    /* background-color: yellow; */
+    border-radius: 50%;
+    background-image: url("imgs/ania.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    overflow: hidden;
+  }
+
+  .aboutPic div h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+    text-align: center;
+    font-family: "meddon", serif;
+  }
+
+  .aboutTxt {
+    position: relative;
+    flex-basis: 50vh;
+  }
+
+  .aboutTxt div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    min-height: 90%;
+    /* background-color: green; */
+  }
+
+  .aboutTxt div p {
+    text-align: center;
+    font-size: 17px;
+    color: grey;
+    font-family: "Raleway", sans-serif;
+  }
+
+  /* ---------------/s1---------------- */
+
   .webDescriptionMobile p {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     color: rgb(255, 255, 255);
-    background-color: rgba(214, 214, 214, 0.9);
+    background-color: rgb(59, 59, 59);
     font-family: "Raleway", sans-serif;
     text-decoration: none;
     text-align: center;
@@ -338,11 +346,7 @@ font-family: 'Open Sans', sans-serif;
   }
 }
 
-@media (orientation: portrait) and (min-width: 361px) and (max-width: 639px) {
-  .animationMobile {
-    display: block;
-  }
-
+@media (orientation: portrait) and (min-width: 361px) and (max-width: 640px) {
   .webDescription {
     display: none;
   }
@@ -412,69 +416,7 @@ font-family: 'Open Sans', sans-serif;
     background-color: #fff;
     border-radius: 50%;
     transform: rotate(0deg);
-    /* animation: flyAbout 20s linear infinite; */
   }
-
-  @keyframes flyAbout {
-    0% {
-      top: 41%;
-      transform: rotate(0deg);
-    }
-    10% {
-      top: 41%;
-      transform: rotate(0deg);
-    }
-    20% {
-      top: 28%;
-      transform: rotate(30deg);
-    }
-    30% {
-      top: 10%;
-      transform: rotate(-10deg);
-    }
-    35% {
-      transform: rotate(0deg);
-    }
-    40% {
-      transform: rotate(0deg);
-    }
-    50% {
-      top: 41%;
-    }
-    54% {
-      top: 36%;
-    }
-    58% {
-      top: 41%;
-    }
-    60% {
-      top: 38%;
-    }
-    62% {
-      top: 41%;
-    }
-
-    100% {
-      top: 41%;
-    }
-  }
-
-  /* aside nav.mainMenuMobile li:nth-child(1) a::after {
-    position: relative;
-    top: -44%;
-    left: 31%;
-    content: "";
-    display: block;
-    border: 1px solid rgb(219, 219, 219);
-    background-color: #fff;
-    width: 23px;
-    height: 23px;
-    border-radius: 50%;
-    font-size: 12px;
-    color: black;
-    text-align: center;
-    line-height: 23px;
-  } */
 
   aside nav.mainMenuMobile li:nth-child(1) a:hover {
     cursor: pointer;
@@ -617,7 +559,7 @@ font-family: 'Open Sans', sans-serif;
     position: relative;
     margin-top: 100vh;
     min-height: 100vh;
-    background-color: rgb(63, 130, 175);
+    background-color: rgb(255, 255, 255);
     z-index: 2;
   }
 
@@ -642,13 +584,74 @@ font-family: 'Open Sans', sans-serif;
     z-index: 2;
   }
 
+  /* ---------------s1---------------- */
+
+  .aboutContainer {
+    display: flex;
+    flex-direction: column;
+    /* background-color: pink; */
+    height: 100vh;
+    transition: 0.3s linear;
+  }
+
+  .aboutContainer.active {
+    padding-top: 20vh;
+  }
+
+  .aboutPic {
+    position: relative;
+    flex-basis: 50vh;
+  }
+
+  .aboutPic div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    height: 280px;
+    width: 280px;
+    /* background-color: yellow; */
+    border-radius: 50%;
+    background-image: url("imgs/ania.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    overflow: hidden;
+  }
+
+  .aboutTxt {
+    position: relative;
+    flex-basis: 50vh;
+    /* background-color: #fff; */
+  }
+
+  .aboutTxt div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    min-height: 90%;
+    /* background-color: green; */
+  }
+
+  .aboutTxt div p {
+    position: absolute;
+    text-align: center;
+    font-size: 120%;
+    color: grey;
+    padding-top: 8%;
+    font-family: "Raleway", sans-serif;
+  }
+
+  /* ---------------/s1---------------- */
+
   .webDescriptionMobile p {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     color: rgb(255, 255, 255);
-    background-color: rgba(214, 214, 214, 0.9);
+    background-color: rgb(59, 59, 59);
     font-family: "Raleway", sans-serif;
     text-decoration: none;
     text-align: center;
@@ -660,14 +663,6 @@ font-family: 'Open Sans', sans-serif;
 @media (orientation: landscape) and (max-width: 640px) {
   .wrapMobile {
     display: block;
-  }
-
-  .wrap01 {
-    display: none;
-  }
-
-  .wrap02 {
-    display: none;
   }
 
   .webDescription {
@@ -707,6 +702,7 @@ font-family: 'Open Sans', sans-serif;
     left: -85px;
     bottom: 0;
     width: 85px;
+    min-height: 300px;
     background-color: rgb(229, 233, 235);
     transition: 0.3s linear;
     overflow: hidden;
@@ -958,7 +954,7 @@ font-family: 'Open Sans', sans-serif;
     position: relative;
     margin-top: 100vh;
     min-height: 100vh;
-    background-color: rgb(63, 130, 175);
+    background-color: rgb(255, 255, 255);
     z-index: 2;
   }
 
@@ -983,6 +979,94 @@ font-family: 'Open Sans', sans-serif;
     z-index: 2;
   }
 
+  /* ---------------s1---------------- */
+
+  .aboutContainer {
+    display: flex;
+    flex-direction: row-reverse;
+    /* background-color: pink; */
+    height: 100vh;
+    width: 100%;
+    transition: 0.3s linear;
+    padding: 10% 0 10% 5%;
+  }
+
+  .aboutContainer.active {
+    padding-left: 85px;
+  }
+
+  .aboutPic {
+    position: relative;
+    flex-basis: 50vw;
+    /* background-color: yellow; */
+  }
+
+  .aboutPic div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 200px;
+    width: 200px;
+    /* background-color: yellow; */
+    border-radius: 50%;
+    background-image: url("imgs/ania.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    overflow: hidden;
+  }
+
+  .aboutPic div h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+    text-align: center;
+    font-family: "meddon", serif;
+  }
+
+  .aboutTxt {
+    position: relative;
+    flex-basis: 50vw;
+    /* background-color: hotpink; */
+  }
+
+  .aboutTxt div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    min-height: 90%;
+    /* background-color: green; */
+  }
+
+  .aboutTxt div p {
+    text-align: center;
+    font-size: 17px;
+    color: grey;
+    font-family: "Raleway", sans-serif;
+  }
+
+  /* ---------------/s1---------------- */
+
+  .webDescriptionMobile p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    background-color: rgb(59, 59, 59);
+    font-family: "Raleway", sans-serif;
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+    padding: 20px;
+  }
+
   /* .animation {
     position: fixed;
     top: 45%;
@@ -996,813 +1080,6 @@ font-family: 'Open Sans', sans-serif;
     overflow: hidden;
     margin: 0 60px 0 5px;
   } */
-
-  .animation {
-    position: fixed;
-    top: 45%;
-    left: 36%;
-    width: 540px;
-    height: 302px;
-    transform: translate(-50%, -50%);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-color: rgba(255, 255, 255, 0.9);
-    overflow: hidden;
-    margin: 0 60px 0 5px;
-    /* background-image: url("slides/18_grey_small_circle.png"); */
-  }
-
-  .discrimination {
-    position: absolute;
-    top: 27.5%;
-    left: 48%;
-    font-family: "Slabo 27px", serif;
-    font-size: 12px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-  }
-
-  .breathe {
-    position: absolute;
-    top: 72.5%;
-    left: 57.5%;
-    font-family: "Slabo 27px", serif;
-    font-size: 12px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    overflow: hidden;
-    opacity: 0;
-    z-index: -6;
-    animation: breatheAppear 1s 4s linear forwards,
-      breatheDisappear 2s 10s linear forwards;
-  }
-  @keyframes breatheAppear {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  p.dotts {
-    position: absolute;
-    top: 72.5%;
-    left: 69%;
-    z-index: -6;
-    font-weight: bold;
-  }
-
-  span:nth-child(1) {
-    animation: dot1 3s 5.5s linear infinite;
-  }
-  span:nth-child(2) {
-    animation: dot2 3s 5.5s linear infinite;
-  }
-  span:nth-child(3) {
-    animation: dot3 3s 5.5s linear infinite;
-  }
-
-  @keyframes dot1 {
-    0% {
-      opacity: 0;
-    }
-    15% {
-      opacity: 0;
-    }
-    18% {
-      opacity: 1;
-    }
-    90% {
-      opacity: 1;
-    }
-    93% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-  @keyframes dot2 {
-    0% {
-      opacity: 0;
-    }
-    35% {
-      opacity: 0;
-    }
-    38% {
-      opacity: 1;
-    }
-    90% {
-      opacity: 1;
-    }
-    93% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-  @keyframes dot3 {
-    0% {
-      opacity: 0;
-    }
-    64% {
-      opacity: 0;
-    }
-    67% {
-      opacity: 1;
-    }
-    90% {
-      opacity: 1;
-    }
-    93% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-
-  .dotts::after {
-    position: absolute;
-    top: 15%;
-    left: -350%;
-    width: 450%;
-    height: 12px;
-    content: "";
-    opacity: 0;
-    z-index: 1;
-    background-color: rgb(255, 255, 255);
-    animation: breatheCover 1s 10s linear forwards;
-  }
-
-  @keyframes breatheCover {
-    0% {
-      opacity: 0;
-    }
-    90% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  .dotts::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: rgb(255, 255, 255);
-    animation: breatheOut 4s 3s linear forwards;
-    opacity: 1;
-    animation: uncoveringDotts 0.1s 5.5s linear forwards;
-    z-index: 1;
-  }
-
-  @keyframes uncoveringDotts {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-
-  @media (min-width: 381px) {
-    .peopleAndPerson img {
-      opacity: 1;
-      height: 302px;
-      animation: coveringPeopleAndPerson 2s 10s linear forwards;
-      z-index: 3;
-    }
-  }
-
-  @media (max-width: 380px) {
-    .peopleAndPerson img {
-      opacity: 1;
-      height: 302px;
-      animation: coveringPeopleAndPerson 2s 10s linear forwards;
-      z-index: 3;
-    }
-  }
-
-  @keyframes coveringPeopleAndPerson {
-    0% {
-      opacity: 1;
-    }
-    20% {
-      opacity: 1;
-    }
-    70% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-
-  .peopleCover img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    height: 302px;
-    animation: peoplesHands 10s 1.5s linear forwards;
-  }
-
-  @keyframes peoplesHands {
-    0% {
-      opacity: 0;
-    }
-    10% {
-      opacity: 1;
-    }
-    60% {
-      opacity: 1;
-    }
-    80% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-
-  .firstCircle img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 302px;
-    z-index: -6;
-    opacity: 0;
-    animation: firstCircleAppears 2.5s 11s linear forwards;
-  }
-
-  @keyframes firstCircleAppears {
-    0% {
-      opacity: 0;
-    }
-    10% {
-      opacity: 1;
-    }
-    40% {
-      opacity: 1;
-    }
-    60% {
-      opacity: 0.5;
-    }
-    80% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-
-  .two img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 302px;
-    z-index: 3;
-    opacity: 0;
-    animation: twoAppears 3s 7.5s linear forwards;
-  }
-
-  @keyframes twoAppears {
-    0% {
-      opacity: 0;
-    }
-    10% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  .firstCircle::before {
-    position: absolute;
-    top: 28%;
-    left: 47%;
-    content: "";
-    width: 25%;
-    height: 8%;
-    background: rgb(255, 255, 255);
-    opacity: 1;
-    z-index: 1;
-    animation: discriminationCover 11s 0s linear forwards;
-  }
-
-  @keyframes discriminationCover {
-    0% {
-      opacity: 0;
-    }
-    90% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  .firstCircleCover div:nth-child(1) {
-    position: absolute;
-    top: 16%;
-    left: 37%;
-    content: "";
-    width: 9%;
-    height: 30%;
-    background: rgb(255, 255, 255);
-    opacity: 0;
-    z-index: 1;
-    animation: circleUncoveringSquares 0.15s 11s linear forwards;
-  }
-  .firstCircleCover div:nth-child(2) {
-    position: absolute;
-    top: 41%;
-    left: 37%;
-    content: "";
-    width: 9%;
-    height: 25%;
-    background: rgb(255, 255, 255);
-    opacity: 0;
-    z-index: 1;
-    transform: skewY(-30deg);
-    animation: circleUncoveringSquares 0.3s 11s linear forwards;
-  }
-  .firstCircleCover div:nth-child(3) {
-    position: absolute;
-    top: 59%;
-    left: 37%;
-    content: "";
-    width: 22.5%;
-    height: 37%;
-    background: rgb(255, 255, 255);
-    opacity: 0;
-    z-index: 1;
-    transform: skewY(-30deg);
-    animation: circleUncoveringSquares 0.45s 11s linear forwards;
-  }
-  .firstCircleCover div:nth-child(4) {
-    position: absolute;
-    top: 61%;
-    left: 59%;
-    content: "";
-    width: 25%;
-    height: 36%;
-    background: rgb(255, 255, 255);
-    opacity: 0;
-    z-index: 1;
-    transform: skewY(30deg);
-    animation: circleUncoveringSquares 0.6s 11s linear forwards;
-  }
-  .firstCircleCover div:nth-child(5) {
-    position: absolute;
-    top: 34%;
-    left: 72%;
-    content: "";
-    width: 13%;
-    height: 35%;
-    background: rgb(255, 255, 255);
-    opacity: 0;
-    z-index: 1;
-    transform: skewY(30deg);
-    animation: circleUncoveringSquares 0.75s 11s linear forwards;
-  }
-  .firstCircleCover div:nth-child(6) {
-    position: absolute;
-    top: 0%;
-    left: 72%;
-    content: "";
-    width: 13%;
-    height: 40%;
-    background: rgba(255, 255, 255);
-    opacity: 0;
-    z-index: 1;
-    animation: circleUncoveringSquares 0.9s 11s linear forwards;
-  }
-  .firstCircleCover div:nth-child(7) {
-    position: absolute;
-    top: 0%;
-    left: 59%;
-    content: "";
-    width: 13%;
-    height: 16%;
-    background: rgb(255, 255, 255);
-    opacity: 0;
-    z-index: 1;
-    animation: circleUncoveringSquares 1.05s 11s linear forwards;
-  }
-  .firstCircleCover div:nth-child(8) {
-    position: absolute;
-    top: 0%;
-    left: 37%;
-    content: "";
-    width: 22%;
-    height: 16%;
-    background: rgb(255, 255, 255);
-    opacity: 0;
-    z-index: 1;
-    animation: circleUncoveringSquares 1.2s 11s linear forwards;
-  }
-
-  @keyframes circleUncoveringSquares {
-    0% {
-      opacity: 1;
-    }
-    90% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-
-  .secondCircle img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 302px;
-    z-index: -5;
-    opacity: 0;
-    animation: secondCircleAppears 1.5s 12s linear forwards;
-  }
-
-  @keyframes secondCircleAppears {
-    0% {
-      opacity: 0;
-    }
-    20% {
-      opacity: 0.9;
-    }
-    40% {
-      opacity: 0.9;
-    }
-    70% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-
-  .thirdCircle img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 302px;
-    z-index: -5;
-    opacity: 0;
-    animation: thirdCircleAppears 1.5s 12.5s linear forwards;
-  }
-
-  @keyframes thirdCircleAppears {
-    0% {
-      opacity: 0;
-    }
-    30% {
-      opacity: 0.9;
-    }
-    50% {
-      opacity: 0.9;
-    }
-    90% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-
-  .fourthCircle img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 302px;
-    z-index: -5;
-    opacity: 0;
-    animation: fourthCircleAppears 1.5s 13s linear forwards;
-  }
-
-  @keyframes fourthCircleAppears {
-    0% {
-      opacity: 0;
-    }
-    40% {
-      opacity: 0.9;
-    }
-    60% {
-      opacity: 0.9;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-
-  .greyBigCircle img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 302px;
-    z-index: -6;
-    opacity: 0;
-    animation: greyBigCircleAppears 1.5s 13.5s linear forwards;
-  }
-
-  @keyframes greyBigCircleAppears {
-    0% {
-      opacity: 0;
-    }
-    30% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  .person img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    height: 302px;
-    z-index: 2;
-    animation: person 2.5s 15s linear forwards;
-  }
-
-  @keyframes person {
-    0% {
-      opacity: 0;
-    }
-    10% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  .oxygen {
-    position: absolute;
-    top: 25%;
-    left: 36%;
-    font-family: "meddon", "serif";
-    font-size: 289%;
-    opacity: 0;
-    z-index: 2;
-    animation: oxygenAppears 2.5s 15s linear forwards;
-  }
-
-  @keyframes oxygenAppears {
-    0% {
-      opacity: 0;
-    }
-    10% {
-      opacity: 0;
-    }
-    60% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  .oxygen::before {
-    position: absolute;
-    top: 12%;
-    left: 13%;
-    font-family: "Slabo 27px", "serif";
-    font-size: 12px;
-    content: "anti-discrimination";
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    /* background-color: rgba(161, 82, 82, 0.5); */
-    opacity: 0;
-    animation: antiDisTrainingsAppear 1.5s 16.5s linear forwards;
-  }
-
-  .oxygen::after {
-    position: absolute;
-    top: 103%;
-    left: 32.5%;
-    font-family: "Slabo 27px", "serif";
-    font-size: 12px;
-    content: "trainings";
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    opacity: 0;
-    /* background-color: rgba(161, 82, 82, 0.5); */
-    animation: antiDisTrainingsAppear 1.5s 16.5s linear forwards;
-  }
-
-  @keyframes antiDisTrainingsAppear {
-    0% {
-      opacity: 0;
-    }
-    10% {
-      opacity: 0;
-    }
-    60% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  .greySmallCircle img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 302px;
-    z-index: -8;
-    opacity: 0;
-    animation: greySmallCircleAppears 3.5s 18s linear forwards;
-  }
-
-  @keyframes greySmallCircleAppears {
-    0% {
-      opacity: 0;
-    }
-    10% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  .secondCircleCover div:nth-child(1) {
-    position: absolute;
-    top: 83%;
-    left: 92%;
-    content: "";
-    width: 13%;
-    height: 20%;
-    background: rgb(255, 255, 255);
-    opacity: 0;
-    z-index: -7;
-    transform: skewY(50deg);
-    animation: smallCircleUncoveringSquares 0.05s 18s linear forwards;
-  }
-  .secondCircleCover div:nth-child(2) {
-    position: absolute;
-    top: 86%;
-    left: 86%;
-    content: "";
-    width: 9%;
-    height: 23%;
-    background: rgba(255, 255, 255);
-    opacity: 0;
-    z-index: -7;
-    transform: skewY(50deg);
-    animation: smallCircleUncoveringSquares 0.1s s linear forwards;
-  }
-  .secondCircleCover div:nth-child(3) {
-    position: absolute;
-    top: 86%;
-    left: 77.5%;
-    content: "";
-    width: 9%;
-    height: 23%;
-    background: rgba(255, 255, 255);
-    opacity: 0;
-    z-index: -7;
-    transform: skewY(-50deg);
-    animation: smallCircleUncoveringSquares 0.15s 18s linear forwards;
-  }
-  .secondCircleCover div:nth-child(4) {
-    position: absolute;
-    top: 72%;
-    left: 72%;
-    content: "";
-    width: 8%;
-    height: 27.5%;
-    background: rgba(255, 255, 255);
-    opacity: 0;
-    z-index: -7;
-    transform: skewY(-50deg);
-    animation: smallCircleUncoveringSquares 0.2s 18s linear forwards;
-  }
-  .secondCircleCover div:nth-child(5) {
-    position: absolute;
-    top: 68%;
-    left: 72%;
-    content: "";
-    width: 8%;
-    height: 10%;
-    background: rgba(255, 255, 255);
-    opacity: 0;
-    z-index: -7;
-    animation: smallCircleUncoveringSquares 0.25s 18s linear forwards;
-  }
-  .secondCircleCover div:nth-child(6) {
-    position: absolute;
-    top: 55%;
-    left: 72%;
-    content: "";
-    width: 10%;
-    height: 13.5%;
-    background: rgba(255, 255, 255);
-    opacity: 0;
-    z-index: -7;
-    animation: smallCircleUncoveringSquares 0.3s 18s linear forwards;
-  }
-  .secondCircleCover div:nth-child(7) {
-    position: absolute;
-    top: 39%;
-    left: 76%;
-    content: "";
-    width: 10%;
-    height: 27%;
-    background: rgba(255, 255, 255);
-    transform: skewY(50deg);
-    opacity: 0;
-    z-index: -7;
-    animation: smallCircleUncoveringSquares 0.35s 18s linear forwards;
-  }
-  .secondCircleCover div:nth-child(8) {
-    position: absolute;
-    top: 39%;
-    left: 86%;
-    content: "";
-    width: 10%;
-    height: 27%;
-    background: rgba(255, 255, 255);
-    transform: skewY(-50deg);
-    opacity: 0;
-    z-index: -7;
-    animation: smallCircleUncoveringSquares 0.4s 18s linear forwards;
-  }
-  .secondCircleCover div:nth-child(9) {
-    position: absolute;
-    top: 50%;
-    left: 92%;
-    content: "";
-    width: 13%;
-    height: 21%;
-    background: rgba(255, 255, 255);
-    transform: skewY(-50deg);
-    opacity: 0;
-    z-index: -7;
-    animation: smallCircleUncoveringSquares 0.45s 18s linear forwards;
-  }
-  .secondCircleCover div:nth-child(10) {
-    position: absolute;
-    top: 68%;
-    left: 92%;
-    content: "";
-    width: 13%;
-    height: 15%;
-    background: rgba(255, 255, 255);
-    opacity: 0;
-    z-index: -7;
-    animation: smallCircleUncoveringSquares 0.5s 18s linear forwards;
-  }
-
-  @keyframes smallCircleUncoveringSquares {
-    0% {
-      opacity: 1;
-    }
-    90% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-
-  .btnStart img {
-    position: absolute;
-    top: -60%;
-    left: -69%;
-    height: 302px;
-    transform: scale(2.5, 2.55);
-  }
-
-  .webDescriptionMobile p {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    color: rgb(255, 255, 255);
-    background-color: rgba(214, 214, 214, 0.9);
-    font-family: "Raleway", sans-serif;
-    text-decoration: none;
-    text-align: center;
-    font-size: 16px;
-    padding: 20px;
-  }
 }
 
 /* @media (orientation: portrait) and (max-width: 360px) {}
@@ -1817,12 +1094,330 @@ font-family: 'Open Sans', sans-serif;
 
 @media (min-width: 641px) {
   .wrapMobile {
-    display: none;
+    display: block;
   }
-}
+  .burger {
+    position: fixed;
+    top: 30px;
+    left: calc(100% - 90px);
+    font-size: 40px;
+    font-family: arial;
+    border-radius: 50%;
+    border: 1px solid rgb(99, 99, 99);
+    /* background-color: rgb(255, 255, 255); */
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    transition: 0.3s linear;
+    z-index: 3;
+  }
 
-.animationMobile {
-  display: none;
+  .burger.active {
+    transform: rotate(405deg);
+    border: 2px solid rgb(255, 255, 255);
+    z-index: 4;
+  }
+
+  .burger:hover {
+    cursor: pointer;
+    /* transform: rotate(405deg); */
+  }
+
+  aside {
+    position: fixed;
+    top: -20vh;
+    left: 0;
+    width: 100%;
+    min-width: 320px;
+    min-height: 17vh;
+    background-color: rgb(229, 233, 235);
+    transition: 0.3s linear;
+    z-index: 3;
+  }
+
+  .burger.active + aside {
+    top: 0;
+  }
+
+  li a {
+    text-decoration: none;
+    font-family: arial;
+    color: black;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+
+  aside nav.mainMenuMobile li:nth-child(1) a {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 95px;
+    height: 95px;
+    line-height: 95px;
+    text-align: center;
+    border: 1px solid rgb(219, 219, 219);
+    background-color: #fff;
+    border-radius: 50%;
+  }
+
+  aside nav.mainMenuMobile li:nth-child(1) a:hover {
+    cursor: pointer;
+  }
+
+  aside nav.mainMenuMobile li:nth-child(2) a {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 110px;
+    height: 110px;
+    line-height: 110px;
+    text-align: center;
+    border: 1px solid rgb(219, 219, 219);
+    background-color: #fff;
+    border-radius: 50%;
+  }
+
+  aside nav.mainMenuMobile li:nth-child(2) a:hover {
+    cursor: pointer;
+  }
+
+  aside nav.mainMenuMobile li:nth-child(3) a {
+    position: absolute;
+    top: 50%;
+    left: 46%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 85px;
+    height: 85px;
+    padding-top: 30px;
+    /* line-height: 86px; */
+    text-align: center;
+    border: 1px solid rgb(219, 219, 219);
+    background-color: #fff;
+    border-radius: 50%;
+  }
+
+  aside nav.mainMenuMobile li:nth-child(3) a:hover {
+    cursor: pointer;
+  }
+
+  aside nav.mainMenuMobile li:nth-child(4) a {
+    position: absolute;
+    left: 78%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    border: 1px solid rgb(219, 219, 219);
+    background-color: #fff;
+    border-radius: 50%;
+    animation: flyContact 20s linear infinite;
+  }
+
+  @keyframes flyContact {
+    0% {
+      top: 50%;
+      transform: rotate(0deg) translate(-50%, -50%);
+    }
+    10% {
+      top: 50%;
+      transform: rotate(0deg) translate(-50%, -50%);
+    }
+    20% {
+      top: 63%;
+      transform: rotate(20deg) translate(-50%, -50%);
+    }
+    30% {
+      top: 50%;
+      transform: rotate(-20deg) translate(-50%, -50%);
+    }
+    35% {
+      transform: rotate(-10deg) translate(-50%, -50%);
+    }
+    40% {
+      transform: rotate(0deg) translate(-50%, -50%);
+    }
+    50% {
+      top: 40%;
+    }
+    54% {
+      top: 36%;
+    }
+    58% {
+      top: 40%;
+    }
+    68% {
+      top: 30%;
+    }
+
+    78% {
+      top: 50%;
+    }
+
+    100% {
+      top: 50%;
+    }
+  }
+
+  aside nav.mainMenuMobile li:nth-child(4) a::after {
+    position: relative;
+    top: -60%;
+    left: 80%;
+    content: "2";
+    display: block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    font-size: 16px;
+    color: rgb(34, 34, 34);
+  }
+
+  aside nav.mainMenuMobile li:nth-child(4) a:hover {
+    cursor: pointer;
+  }
+
+  /* --------sections-------------- */
+
+  .s1 {
+    position: relative;
+    margin-top: 100vh;
+    min-height: 100vh;
+    background-color: rgb(255, 255, 255);
+    z-index: 2;
+  }
+
+  .s2 {
+    position: relative;
+    min-height: 100vh;
+    background-color: rgb(149, 207, 245);
+    z-index: 2;
+  }
+
+  .s3 {
+    position: relative;
+    min-height: 100vh;
+    background-color: rgb(92, 139, 153);
+    z-index: 2;
+  }
+
+  .s4 {
+    position: relative;
+    min-height: 100vh;
+    background-color: rgb(92, 116, 133);
+    z-index: 2;
+  }
+
+  .webDescriptionMobile p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    background-color: rgb(59, 59, 59);
+    font-family: "Raleway", sans-serif;
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+    padding: 20px;
+  }
+  /* ---------------s1---------------- */
+
+  .aboutContainer {
+    display: flex;
+    flex-direction: row;
+    /* background-color: pink; */
+    height: 100vh;
+    transition: 0.3s linear;
+  }
+
+  .aboutContainer.active {
+    padding-top: 15vh;
+  }
+
+  .aboutPic {
+    position: relative;
+    flex-basis: 50vw;
+    /* background-color: hotpink; */
+  }
+
+  .aboutPic div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 27vw;
+    width: 27vw;
+    /* background-color: yellow; */
+    border-radius: 50%;
+    background-image: url("imgs/ania.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    overflow: hidden;
+  }
+
+  .aboutTxt {
+    position: relative;
+    flex-basis: 50vw;
+    /* background-color: green; */
+  }
+
+  .aboutTxt div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    min-height: 45%;
+    text-align: center;
+    /* background-color: yellow; */
+  }
+
+  .aboutTxt div p {
+    text-align: center;
+    font-size: 140%;
+    color: grey;
+    font-family: "Raleway", sans-serif;
+    padding-left: 25px;
+    padding-right: 55px;
+    padding-top: 3%;
+  }
+
+  @media (min-width: 641px) and (max-width: 900px) {
+    .aboutPic div {
+      height: 300px;
+      width: 300px;
+    }
+  }
+
+  @media (min-width: 901px) and (max-width: 1300px) {
+    .aboutPic div {
+      height: 350px;
+      width: 350px;
+    }
+    .aboutTxt div p {
+      font-size: 150%;
+      padding-top: 5%;
+    }
+  }
+
+  @media (min-width: 1301px) {
+    .aboutTxt div p {
+      padding-top: 5%;
+      padding-left: 0;
+      padding-right: 35%;
+      font-size: 165%;
+    }
+  }
+
+  /* ---------------/s1---------------- */
 }
 
 /* ---------------FOOTER---------------- */
