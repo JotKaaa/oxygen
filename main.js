@@ -32,10 +32,12 @@ const indexTyping = setInterval(discriminationAddLetter, 100);
 
 const burger = document.querySelector(".burger");
 const aboutContainer = document.querySelector(".aboutContainer");
+const podcastsContainer = document.querySelector(".podcastsContainer");
 
 burger.addEventListener("click", function () {
   burger.classList.toggle("active");
   aboutContainer.classList.toggle("active");
+  podcastsContainer.classList.toggle("active");
 });
 
 // --------------footer mobile landscape -------------
