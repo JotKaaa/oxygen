@@ -33,11 +33,17 @@ const indexTyping = setInterval(discriminationAddLetter, 100);
 const burger = document.querySelector(".burger");
 const aboutContainer = document.querySelector(".aboutContainer");
 const podcastsContainer = document.querySelector(".podcastsContainer");
+const o2 = document.querySelector(".o2");
+const co2 = document.querySelector(".co2");
+const contactContainer = document.querySelector(".contactContainer");
 
 burger.addEventListener("click", function () {
   burger.classList.toggle("active");
   aboutContainer.classList.toggle("active");
   podcastsContainer.classList.toggle("active");
+  o2.classList.toggle("active");
+  co2.classList.toggle("active");
+  contactContainer.classList.toggle("active");
 });
 
 // --------------footer mobile landscape -------------
