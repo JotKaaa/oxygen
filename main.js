@@ -36,6 +36,7 @@ const podcastsContainer = document.querySelector(".podcastsContainer");
 const o2 = document.querySelector(".o2");
 const co2 = document.querySelector(".co2");
 const contactContainer = document.querySelector(".contactContainer");
+const webDescriptionMobile = document.querySelector(".webDescriptionMobile");
 
 burger.addEventListener("click", function () {
   burger.classList.toggle("active");
@@ -44,6 +45,7 @@ burger.addEventListener("click", function () {
   o2.classList.toggle("active");
   co2.classList.toggle("active");
   contactContainer.classList.toggle("active");
+  webDescriptionMobile.classList.toggle("active");
 });
 
 // --------------footer mobile landscape -------------

@@ -32,7 +32,7 @@ font-family: 'Open Sans', sans-serif;
     font-size: 40px;
     font-family: arial;
     border-radius: 50%;
-    border: 1px solid rgb(99, 99, 99);
+    border: 1px solid rgb(190, 190, 190);
     /* background-color: rgb(255, 255, 255); */
     width: 45px;
     height: 45px;
@@ -44,7 +44,7 @@ font-family: 'Open Sans', sans-serif;
 
   .burger.active {
     transform: rotate(405deg);
-    border: 1px solid rgb(99, 99, 99);
+    border: 1px solid rgb(190, 190, 190);
     top: 17vh;
   }
 
@@ -230,26 +230,48 @@ font-family: 'Open Sans', sans-serif;
   }
 
   /* --------sections-------------- */
-
-  .s1 {
+  .s01a {
     position: relative;
     margin-top: 100vh;
     min-height: 100vh;
-    background-color: rgb(255, 255, 255);
+    background-color: #4f6261;
+    z-index: 2;
+  }
+
+  .s1 {
+    position: relative;
+    /* margin-top: 100vh; */
+    min-height: 100vh;
+    background-color: rgb(249, 249, 249);
+    z-index: 2;
+  }
+
+  .s02b {
+    position: relative;
+    min-height: 100vh;
+    background-color: #337c7b;
     z-index: 2;
   }
 
   .s2 {
     position: relative;
     min-height: 100vh;
-    background-color: rgb(255, 255, 255);
+    /* background-color: #2b7a78; */
+    background-color: rgb(248, 248, 248);
     z-index: 2;
   }
 
   .s3 {
     position: relative;
     min-height: 100vh;
-    background-color: rgb(92, 139, 153);
+    background-color: rgb(18, 161, 161);
+    z-index: 2;
+  }
+
+  .s04c {
+    position: relative;
+    min-height: 100vh;
+    background-color: rgb(249, 249, 249);
     z-index: 2;
   }
 
@@ -259,6 +281,71 @@ font-family: 'Open Sans', sans-serif;
     background-color: rgb(92, 116, 133);
     z-index: 2;
   }
+
+  /* ------------------s0------------------- */
+
+  .s01a div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .s01a div h1 {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 32px;
+    animation: blinkingTxt 5s linear infinite;
+  }
+
+  @keyframes blinkingTxt {
+    0% {
+      color: rgba(255, 255, 255, 0.5);
+    }
+    59% {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    60% {
+      color: rgba(146, 46, 46, 0.5);
+    }
+    61% {
+      color: rgba(146, 46, 46, 0.5);
+    }
+    62% {
+      color: rgba(255, 255, 255, 0.5);
+    }
+    63% {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    64% {
+      color: rgba(146, 46, 46, 0.5);
+    }
+    65% {
+      color: rgba(146, 46, 46, 0.5);
+    }
+    66% {
+      color: rgba(255, 255, 255, 0.5);
+    }
+    87% {
+      color: rgba(255, 255, 255, 0.5);
+    }
+    88% {
+      color: rgba(146, 46, 46, 0.5);
+    }
+    89% {
+      color: rgba(146, 46, 46, 0.5);
+    }
+    90% {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    100% {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  /* -----------------/s0------------------- */
 
   /* ---------------s1---------------- */
 
@@ -312,19 +399,35 @@ font-family: 'Open Sans', sans-serif;
 
   .aboutTxt div p {
     text-align: center;
-    font-size: 17px;
+    font-size: 16px;
     color: grey;
     font-family: "Raleway", sans-serif;
   }
 
   /* ---------------/s1---------------- */
 
+  /* ------------------s02b------------------- */
+
+  .s02b div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .s02b div h1 {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 32px;
+  }
+
+  /* -----------------/s0------------------- */
+
   /* ---------------s2---------------- */
 
   .podcastsContainer {
     display: flex;
     flex-direction: column;
-    background-color: pink;
+    /* background-color: pink; */
     min-width: 300px;
     height: 200vh;
     transition: 0.3s linear;
@@ -353,6 +456,81 @@ font-family: 'Open Sans', sans-serif;
     font-family: "Raleway", sans-serif;
     font-size: 14px;
     padding: 10px 0 30px 0;
+    background-color: #fff;
+    box-shadow: 5px 5px 5px rgb(209, 209, 209);
+  }
+
+  .flyingOxy {
+    width: 100%;
+    height: 5px;
+    /* background-color: pink; */
+  }
+
+  .flyingOxy p {
+    color: rgb(255, 255, 255);
+    /* text-shadow: 4px 4px rgb(230, 229, 229); */
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  .flyingOxy p:nth-child(1) {
+    padding-top: 10%;
+    text-align: center;
+    padding-left: 30%;
+    color: rgb(249, 249, 249);
+  }
+
+  .flyingOxy p:nth-child(2) {
+    padding-top: 0%;
+    animation: flyingOxy2 20s linear infinite;
+    color: rgb(249, 249, 249);
+  }
+
+  .flyingOxy p:nth-child(3) {
+    padding-top: 0;
+    text-align: center;
+    animation: flyingOxy3 20s linear infinite;
+  }
+
+  @keyframes flyingOxy3 {
+    0% {
+      padding-top: 10%;
+      padding-left: 70%;
+      text-align: center;
+      transform: rotate(0deg) translate(-50%, -50%);
+    }
+    20% {
+      padding-top: 20%;
+      transform: rotate(0deg) translate(-50%, -50%);
+    }
+    40% {
+      padding-top: 10%;
+      transform: rotate(20deg) translate(-50%, -50%);
+    }
+    60% {
+      padding-top: 20%;
+      transform: rotate(-20deg) translate(-50%, -50%);
+    }
+    80% {
+      padding-top: 30%;
+      transform: rotate(0deg) translate(-50%, -50%);
+    }
+    100% {
+      padding-top: 10%;
+      padding-left: 70%;
+      transform: rotate(0deg) translate(-50%, -50%);
+    }
+  }
+
+  .flyingOxy p:nth-child(4) {
+    padding-top: 40%;
+    text-align: right;
+    padding-right: 30%;
+  }
+
+  .flyingOxy p:nth-child(5) {
+    padding-top: 0%;
+    text-align: right;
   }
 
   .video02 {
@@ -373,7 +551,9 @@ font-family: 'Open Sans', sans-serif;
     text-align: center;
     font-family: "Raleway", sans-serif;
     font-size: 14px;
-    padding: 10px 0 10px 0;
+    padding: 10px 0 30px 0;
+    background-color: #fff;
+    box-shadow: 5px 5px 5px rgb(209, 209, 209);
   }
 
   /* ---------------/s2---------------- */
@@ -383,79 +563,176 @@ font-family: 'Open Sans', sans-serif;
   .workshopsContainer {
     display: flex;
     flex-direction: column;
-    background-color: pink;
-    height: 100vh;
+    /* background-color: rgb(250, 217, 222); */
+    height: 110vh;
   }
 
   .futureWorkshops {
-    background-color: rgb(101, 170, 101);
-    flex-basis: 50vh;
+    /* background-color: rgb(248, 152, 168); */
+    flex-basis: 59vh;
   }
 
   .o2 {
-    background-color: pink;
-    width: 90%;
+    position: relative;
+    background-color: rgb(96, 199, 199);
     margin: 0 auto;
     margin-top: 8vh;
     margin-bottom: 2vh;
     font-family: "Raleway", sans-serif;
     font-size: 14px;
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
     transition: 0.3s linear;
+    color: white;
   }
 
   .o2.active {
-    margin-top: 19vh;
+    margin-top: 17vh;
+  }
+
+  .o2::after {
+    position: absolute;
+    bottom: -10%;
+    right: 5%;
+    display: block;
+    content: "2";
+    font-size: 42px;
+    color: rgb(155, 205, 209);
+    font-family: "Meddon", cursive;
   }
 
   .o2 h1 {
-    padding-bottom: 15px;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .o2 p {
+    position: absolute;
+    display: block;
+    width: 80%;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 13px;
+    text-align: center;
   }
 
   .pastWorkshops {
-    background-color: rgb(191, 191, 251);
-    flex-basis: 50vh;
+    /* background-color: rgb(226, 144, 157); */
+    flex-basis: 41vh;
   }
 
   .co2 {
-    background-color: pink;
-    width: 90%;
-    margin: 8vh auto;
-    margin-bottom: 2vh;
+    position: relative;
+    background-color: rgb(92, 116, 133);
+    margin: 0 auto;
+    margin-top: 0vh;
+    margin-bottom: 1vh;
     font-family: "Raleway", sans-serif;
     font-size: 14px;
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    transition: 0.3s linear;
+  }
+
+  .co2::after {
+    position: absolute;
+    bottom: 38%;
+    right: -13%;
+    display: block;
+    content: "2";
+    transform: rotate(15deg);
+    font-size: 42px;
+    color: rgb(92, 116, 133);
+    font-family: "Meddon", cursive;
+  }
+
+  .co2::before {
+    position: absolute;
+    bottom: 43%;
+    right: 72%;
+    display: block;
+    content: "C";
+    font-size: 80px;
+    color: rgb(224, 224, 224);
+    font-family: "Meddon", cursive;
+    transform: rotate(15deg);
   }
 
   .co2 h1 {
-    padding-bottom: 15px;
+    position: absolute;
+    top: 16%;
+    left: 31%;
+    transform: translate(-50%, 0%);
+    font-size: 20px;
+    text-align: center;
+    color: rgb(224, 224, 224);
+    transform: rotate(15deg);
+  }
+
+  .co2 p {
+    position: absolute;
+    display: block;
+    width: 80%;
+    top: 42%;
+    left: 7%;
+    transform: translate(-50%, -50%);
+    font-size: 13px;
+    text-align: center;
+    color: white;
+    transform: rotate(15deg);
   }
 
   /* -----------------/s3----------------- */
+
+  /* ------------------s04c------------------- */
+
+  .s04c div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .s04c div h1 {
+    color: rgba(53, 53, 53, 0.835);
+    font-size: 32px;
+  }
+
+  /* -----------------/s04c------------------- */
 
   /* -------------------s4-------------------- */
 
   .contactContainer {
     display: flex;
     flex-direction: column;
-    background-color: pink;
+    /* background-color: rgb(243, 95, 122); */
     height: calc(100vh - 72px);
     transition: 0.3s linear;
   }
 
   .contactContainer.active {
-    padding-top: 22%;
+    padding-top: 14.5vh;
   }
 
   .contactForm {
-    height: 75%;
-    background-color: rgb(223, 204, 204);
+    height: 73%;
+    /* background-color: rgb(223, 204, 204); */
+    min-width: 320px;
   }
 
   .contactForm div {
-    background-color: rgb(245, 128, 147);
+    /* background-color: rgb(241, 153, 167); */
     margin: 0 auto;
     margin-top: 22%;
     width: 74%;
-    height: 80%;
+    height: 100%;
   }
 
   .contactForm div input {
@@ -463,12 +740,12 @@ font-family: 'Open Sans', sans-serif;
     height: 35px;
     padding-left: 10px;
     font-size: 16px;
-    margin-bottom: 14px;
+    margin-bottom: 10px;
   }
 
   .contactForm div textarea {
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
     font-size: 16px;
     font-family: "Raleway", sans-serif;
   }
@@ -480,22 +757,31 @@ font-family: 'Open Sans', sans-serif;
   }
 
   .socialMedia {
-    height: 25%;
-    background-color: rgb(202, 181, 181);
+    height: 27%;
+    /* background-color: rgb(202, 181, 181); */
+    min-width: 320px;
   }
 
   .socialMedia div {
-    background-color: rgb(245, 128, 147);
+    /* background-color: rgb(245, 128, 147); */
     margin: 0 auto;
-    margin-top: 3%;
+    margin-top: 5%;
     width: 74%;
-    height: 80%;
+    height: 84%;
   }
 
   .socialMedia div p {
     font-size: 16px;
     font-family: "Raleway", sans-serif;
-    padding-bottom: 13px;
+    padding-bottom: 5px;
+    text-align: center;
+  }
+
+  .fa-facebook-square,
+  .fa-envelope-square,
+  .fa-phone-square-alt {
+    font-size: 22px;
+    vertical-align: -3px;
   }
 
   .webDescriptionMobile p {
@@ -527,7 +813,7 @@ font-family: 'Open Sans', sans-serif;
     font-size: 40px;
     font-family: arial;
     border-radius: 50%;
-    border: 1px solid rgb(99, 99, 99);
+    border: 1px solid rgb(190, 190, 190);
     /* background-color: rgb(255, 255, 255); */
     width: 45px;
     height: 45px;
@@ -724,25 +1010,48 @@ font-family: 'Open Sans', sans-serif;
 
   /* --------sections-------------- */
 
-  .s1 {
+  .s01a {
     position: relative;
     margin-top: 100vh;
     min-height: 100vh;
-    background-color: rgb(255, 255, 255);
+    background-color: #4f6261;
+    z-index: 2;
+  }
+
+  .s1 {
+    position: relative;
+    /* margin-top: 100vh; */
+    min-height: 100vh;
+    background-color: rgb(249, 249, 249);
+    z-index: 2;
+  }
+
+  .s02b {
+    position: relative;
+    min-height: 100vh;
+    background-color: #337c7b;
     z-index: 2;
   }
 
   .s2 {
     position: relative;
     min-height: 100vh;
-    background-color: rgb(255, 255, 255);
+    /* background-color: #2b7a78; */
+    background-color: rgb(248, 248, 248);
     z-index: 2;
   }
 
   .s3 {
     position: relative;
     min-height: 100vh;
-    background-color: rgb(92, 139, 153);
+    background-color: rgb(18, 161, 161);
+    z-index: 2;
+  }
+
+  .s04c {
+    position: relative;
+    min-height: 100vh;
+    background-color: rgb(249, 249, 249);
     z-index: 2;
   }
 
@@ -752,6 +1061,71 @@ font-family: 'Open Sans', sans-serif;
     background-color: rgb(92, 116, 133);
     z-index: 2;
   }
+
+  /* ------------------s0------------------- */
+
+  .s01a div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .s01a div h1 {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 32px;
+    animation: blinkingTxt 5s linear infinite;
+  }
+
+  @keyframes blinkingTxt {
+    0% {
+      color: rgba(255, 255, 255, 0.5);
+    }
+    59% {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    60% {
+      color: rgba(146, 46, 46, 0.5);
+    }
+    61% {
+      color: rgba(146, 46, 46, 0.5);
+    }
+    62% {
+      color: rgba(255, 255, 255, 0.5);
+    }
+    63% {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    64% {
+      color: rgba(146, 46, 46, 0.5);
+    }
+    65% {
+      color: rgba(146, 46, 46, 0.5);
+    }
+    66% {
+      color: rgba(255, 255, 255, 0.5);
+    }
+    87% {
+      color: rgba(255, 255, 255, 0.5);
+    }
+    88% {
+      color: rgba(146, 46, 46, 0.5);
+    }
+    89% {
+      color: rgba(146, 46, 46, 0.5);
+    }
+    90% {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    100% {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  /* -----------------/s0------------------- */
 
   /* ---------------s1---------------- */
 
@@ -814,6 +1188,22 @@ font-family: 'Open Sans', sans-serif;
 
   /* ---------------/s1---------------- */
 
+  /* ------------------s02b------------------- */
+
+  .s02b div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .s02b div h1 {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 32px;
+  }
+
+  /* -----------------/s0------------------- */
+
   /* ---------------s2---------------- */
 
   .podcastsContainer {
@@ -833,9 +1223,9 @@ font-family: 'Open Sans', sans-serif;
   .video01 {
     flex-basis: 50%;
     /* background-color: rgb(251, 251, 182); */
-    width: 88%;
-    margin-left: 6%;
-    margin-right: 6%;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
   }
 
   .videoTitle01 h1 {
@@ -848,15 +1238,90 @@ font-family: 'Open Sans', sans-serif;
     text-align: center;
     font-family: "Raleway", sans-serif;
     font-size: 14px;
-    padding: 10px 0 30px 0;
+    padding: 10px 10px 30px 10px;
+    background-color: #fff;
+    box-shadow: 5px 5px 5px rgb(209, 209, 209);
+  }
+
+  .flyingOxy {
+    width: 100%;
+    height: 5px;
+    /* background-color: pink; */
+  }
+
+  .flyingOxy p {
+    color: rgb(255, 255, 255);
+    /* text-shadow: 4px 4px rgb(230, 229, 229); */
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  .flyingOxy p:nth-child(1) {
+    padding-top: 10%;
+    text-align: center;
+    padding-left: 30%;
+    color: rgb(249, 249, 249);
+  }
+
+  .flyingOxy p:nth-child(2) {
+    padding-top: 0%;
+    animation: flyingOxy2 20s linear infinite;
+    color: rgb(249, 249, 249);
+  }
+
+  .flyingOxy p:nth-child(3) {
+    padding-top: 0;
+    text-align: center;
+    animation: flyingOxy3 20s linear infinite;
+  }
+
+  @keyframes flyingOxy3 {
+    0% {
+      padding-top: 10%;
+      padding-left: 70%;
+      text-align: center;
+      transform: rotate(0deg) translate(-50%, -50%);
+    }
+    20% {
+      padding-top: 20%;
+      transform: rotate(0deg) translate(-50%, -50%);
+    }
+    40% {
+      padding-top: 10%;
+      transform: rotate(20deg) translate(-50%, -50%);
+    }
+    60% {
+      padding-top: 20%;
+      transform: rotate(-20deg) translate(-50%, -50%);
+    }
+    80% {
+      padding-top: 30%;
+      transform: rotate(0deg) translate(-50%, -50%);
+    }
+    100% {
+      padding-top: 10%;
+      padding-left: 70%;
+      transform: rotate(0deg) translate(-50%, -50%);
+    }
+  }
+
+  .flyingOxy p:nth-child(4) {
+    padding-top: 40%;
+    text-align: right;
+    padding-right: 30%;
+  }
+
+  .flyingOxy p:nth-child(5) {
+    padding-top: 0%;
+    text-align: right;
   }
 
   .video02 {
     flex-basis: 50%;
     /* background-color: rgb(250, 250, 146); */
-    width: 88%;
-    margin-left: 6%;
-    margin-right: 6%;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
   }
 
   .videoTitle02 h1 {
@@ -869,7 +1334,9 @@ font-family: 'Open Sans', sans-serif;
     text-align: center;
     font-family: "Raleway", sans-serif;
     font-size: 14px;
-    padding: 10px 0 10px 0;
+    padding: 10px 0 30px 0;
+    background-color: #fff;
+    box-shadow: 5px 5px 5px rgb(209, 209, 209);
   }
 
   /* ---------------/s2---------------- */
@@ -879,53 +1346,222 @@ font-family: 'Open Sans', sans-serif;
   .workshopsContainer {
     display: flex;
     flex-direction: column;
-    background-color: pink;
-    height: 100vh;
+    /* background-color: rgb(250, 217, 222); */
+    height: 110vh;
   }
 
   .futureWorkshops {
-    background-color: rgb(101, 170, 101);
-    flex-basis: 50vh;
+    /* background-color: rgb(248, 152, 168); */
+    flex-basis: 59vh;
   }
 
   .o2 {
-    background-color: rgb(223, 212, 214);
-    width: 75%;
+    position: relative;
+    background-color: rgb(96, 199, 199);
     margin: 0 auto;
     margin-top: 8vh;
     margin-bottom: 2vh;
     font-family: "Raleway", sans-serif;
-    font-size: 14px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
     transition: 0.3s linear;
+    color: white;
   }
 
   .o2.active {
-    margin-top: 27vh;
+    margin-top: 20vh;
+  }
+
+  .o2::after {
+    position: absolute;
+    bottom: -10%;
+    right: 5%;
+    display: block;
+    content: "2";
+    font-size: 42px;
+    color: rgb(155, 205, 209);
+    font-family: "Meddon", cursive;
   }
 
   .o2 h1 {
-    padding-bottom: 15px;
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .o2 p {
+    position: absolute;
+    display: block;
+    width: 80%;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    text-align: center;
   }
 
   .pastWorkshops {
-    background-color: rgb(191, 191, 251);
-    flex-basis: 50vh;
+    /* background-color: rgb(226, 144, 157); */
+    flex-basis: 41vh;
   }
 
   .co2 {
-    background-color: pink;
-    width: 75%;
-    margin: 8vh auto;
-    margin-bottom: 2vh;
+    position: relative;
+    background-color: rgb(92, 116, 133);
+    margin: 0 auto;
+    margin-top: 0vh;
+    margin-bottom: 1vh;
     font-family: "Raleway", sans-serif;
     font-size: 14px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    transition: 0.3s linear;
+  }
+
+  .co2::after {
+    position: absolute;
+    bottom: 38%;
+    right: -13%;
+    display: block;
+    content: "2";
+    transform: rotate(15deg);
+    font-size: 42px;
+    color: rgb(92, 116, 133);
+    font-family: "Meddon", cursive;
+  }
+
+  .co2::before {
+    position: absolute;
+    bottom: 48%;
+    right: 72%;
+    display: block;
+    content: "C";
+    font-size: 80px;
+    color: rgb(224, 224, 224);
+    font-family: "Meddon", cursive;
+    transform: rotate(15deg);
   }
 
   .co2 h1 {
-    padding-bottom: 15px;
+    position: absolute;
+    top: 16%;
+    left: 33%;
+    transform: translate(-50%, 0%);
+    font-size: 24px;
+    text-align: center;
+    color: rgb(224, 224, 224);
+    transform: rotate(15deg);
+  }
+
+  .co2 p {
+    position: absolute;
+    display: block;
+    width: 80%;
+    top: 42%;
+    left: 7%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    transform: rotate(15deg);
   }
 
   /* -----------------/s3----------------- */
+
+  /* ------------------s04c------------------- */
+
+  .s04c div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .s04c div h1 {
+    color: rgba(53, 53, 53, 0.835);
+    font-size: 32px;
+  }
+
+  /* -----------------/s04c------------------- */
+
+  /* -------------------s4-------------------- */
+
+  .contactContainer {
+    display: flex;
+    flex-direction: column;
+    /* background-color: rgb(243, 95, 122); */
+    height: calc(100vh - 72px);
+    transition: 0.3s linear;
+  }
+
+  .contactContainer.active {
+    padding-top: 7vh;
+  }
+
+  .contactForm {
+    height: 74%;
+    /* background-color: rgb(223, 204, 204); */
+  }
+
+  .contactForm div {
+    /* background-color: rgb(241, 153, 167); */
+    margin: 0 auto;
+    margin-top: 35%;
+    width: 74%;
+    height: 100%;
+  }
+
+  .contactForm div input {
+    width: 100%;
+    height: 35px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .contactForm div textarea {
+    width: 100%;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-family: "Raleway", sans-serif;
+  }
+
+  .btnForm {
+    width: 100%;
+    height: 35px;
+    font-size: 16px;
+  }
+
+  .socialMedia {
+    height: 26%;
+    /* background-color: rgb(202, 181, 181); */
+  }
+
+  .socialMedia div {
+    /* background-color: rgb(245, 128, 147); */
+    margin: 0 auto;
+    margin-top: 3%;
+    width: 74%;
+    height: 84%;
+  }
+
+  .socialMedia div p {
+    font-size: 16px;
+    font-family: "Raleway", sans-serif;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  .fa-facebook-square,
+  .fa-envelope-square,
+  .fa-phone-square-alt {
+    font-size: 25px;
+  }
 
   .webDescriptionMobile p {
     position: absolute;
@@ -937,9 +1573,25 @@ font-family: 'Open Sans', sans-serif;
     font-family: "Raleway", sans-serif;
     text-decoration: none;
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
     padding: 20px;
   }
+
+  /* ------------------/s4------------------ */
+
+  /* .webDescriptionMobile p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    background-color: rgb(59, 59, 59);
+    font-family: "Raleway", sans-serif;
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+    padding: 20px;
+  } */
 }
 
 @media (orientation: landscape) and (max-width: 640px) {
@@ -958,7 +1610,7 @@ font-family: 'Open Sans', sans-serif;
     font-size: 40px;
     font-family: arial;
     border-radius: 50%;
-    border: 1px solid rgb(99, 99, 99);
+    border: 1px solid rgb(190, 190, 190);
     /* background-color: rgb(255, 255, 255); */
     width: 45px;
     height: 45px;
@@ -970,7 +1622,7 @@ font-family: 'Open Sans', sans-serif;
 
   .burger.active {
     transform: rotate(405deg);
-    border: 1px solid rgb(99, 99, 99);
+    border: 1px solid rgb(190, 190, 190);
   }
 
   .burger:hover {
@@ -983,7 +1635,7 @@ font-family: 'Open Sans', sans-serif;
     top: 0;
     left: -85px;
     bottom: 0;
-    width: 65px;
+    width: 80px;
     min-height: 204px;
     background-color: rgb(229, 233, 235);
     transition: 0.3s linear;
@@ -1038,12 +1690,12 @@ font-family: 'Open Sans', sans-serif;
 
   aside nav.mainMenuMobile li:nth-child(2) a {
     position: absolute;
-    top: 24%;
-    left: calc(50% - 44px);
+    top: 26%;
+    left: calc(50% - 40px);
     display: block;
-    width: 88px;
-    height: 88px;
-    line-height: 88px;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
     text-align: center;
     border: 1px solid rgb(219, 219, 219);
     background-color: #fff;
@@ -1102,14 +1754,14 @@ font-family: 'Open Sans', sans-serif;
     }
     20% {
       top: 77%;
-      transform: rotate(20deg);
+      transform: rotate(12deg);
     }
     30% {
       top: 73%;
-      transform: rotate(-20deg);
+      transform: rotate(-7deg);
     }
     32% {
-      transform: rotate(-10deg);
+      transform: rotate(-5deg);
     }
     35% {
       top: 77%;
@@ -1153,26 +1805,48 @@ font-family: 'Open Sans', sans-serif;
   }
 
   /* --------sections-------------- */
-
-  .s1 {
+  .s01a {
     position: relative;
     margin-top: 100vh;
     min-height: 100vh;
-    background-color: rgb(255, 255, 255);
+    background-color: #4f6261;
+    z-index: 2;
+  }
+
+  .s1 {
+    position: relative;
+    /* margin-top: 100vh; */
+    min-height: 100vh;
+    background-color: rgb(249, 249, 249);
+    z-index: 2;
+  }
+
+  .s02b {
+    position: relative;
+    min-height: 100vh;
+    background-color: #337c7b;
     z-index: 2;
   }
 
   .s2 {
     position: relative;
     min-height: 100vh;
-    background-color: rgb(255, 255, 255);
+    /* background-color: #2b7a78; */
+    background-color: rgb(248, 248, 248);
     z-index: 2;
   }
 
   .s3 {
     position: relative;
     min-height: 100vh;
-    background-color: rgb(92, 139, 153);
+    background-color: rgb(18, 161, 161);
+    z-index: 2;
+  }
+
+  .s04c {
+    position: relative;
+    min-height: 100vh;
+    background-color: rgb(249, 249, 249);
     z-index: 2;
   }
 
@@ -1183,7 +1857,70 @@ font-family: 'Open Sans', sans-serif;
     z-index: 2;
   }
 
-  /* ---------------s1---------------- */
+  /* ------------------s0------------------- */
+
+  .s01a div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .s01a div h1 {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 32px;
+    animation: blinkingTxt 5s linear infinite;
+  }
+
+  @keyframes blinkingTxt {
+    0% {
+      color: rgba(255, 255, 255, 0.5);
+    }
+    59% {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    60% {
+      color: rgba(146, 46, 46, 0.5);
+    }
+    61% {
+      color: rgba(146, 46, 46, 0.5);
+    }
+    62% {
+      color: rgba(255, 255, 255, 0.5);
+    }
+    63% {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    64% {
+      color: rgba(146, 46, 46, 0.5);
+    }
+    65% {
+      color: rgba(146, 46, 46, 0.5);
+    }
+    66% {
+      color: rgba(255, 255, 255, 0.5);
+    }
+    87% {
+      color: rgba(255, 255, 255, 0.5);
+    }
+    88% {
+      color: rgba(146, 46, 46, 0.5);
+    }
+    89% {
+      color: rgba(146, 46, 46, 0.5);
+    }
+    90% {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    100% {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  /* -----------------/s0------------------- */
 
   .aboutContainer {
     display: flex;
@@ -1257,6 +1994,22 @@ font-family: 'Open Sans', sans-serif;
 
   /* ---------------/s1---------------- */
 
+  /* ------------------s02b------------------- */
+
+  .s02b div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .s02b div h1 {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 32px;
+  }
+
+  /* -----------------/s0------------------- */
+
   /* ---------------s2---------------- */
 
   .podcastsContainer {
@@ -1269,16 +2022,16 @@ font-family: 'Open Sans', sans-serif;
   }
 
   .podcastsContainer.active {
-    padding-left: 85px;
+    padding-left: 25px;
     min-height: 100vh;
   }
 
   .video01 {
     flex-basis: 50%;
     /* background-color: rgb(251, 251, 182); */
-    width: 80%;
-    margin-left: 5%;
-    margin-right: 10%;
+    width: 74%;
+    margin-left: 13%;
+    margin-right: 13%;
   }
 
   .videoTitle01 h1 {
@@ -1292,14 +2045,89 @@ font-family: 'Open Sans', sans-serif;
     font-family: "Raleway", sans-serif;
     font-size: 14px;
     padding: 10px 0 30px 0;
+    background-color: #fff;
+    box-shadow: 5px 5px 5px rgb(209, 209, 209);
+  }
+
+  .flyingOxy {
+    width: 100%;
+    height: 5px;
+    /* background-color: pink; */
+  }
+
+  .flyingOxy p {
+    color: rgb(255, 255, 255);
+    /* text-shadow: 4px 4px rgb(230, 229, 229); */
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  .flyingOxy p:nth-child(1) {
+    padding-top: 10%;
+    text-align: center;
+    padding-left: 30%;
+    color: rgb(249, 249, 249);
+  }
+
+  .flyingOxy p:nth-child(2) {
+    padding-top: 0%;
+    animation: flyingOxy2 20s linear infinite;
+    color: rgb(249, 249, 249);
+  }
+
+  .flyingOxy p:nth-child(3) {
+    padding-top: -20%;
+    text-align: center;
+    animation: flyingOxy3 20s linear infinite;
+  }
+
+  @keyframes flyingOxy3 {
+    0% {
+      padding-top: -20%;
+      padding-left: 70%;
+      text-align: center;
+      transform: rotate(0deg) translate(-50%, -50%);
+    }
+    20% {
+      padding-top: -30%;
+      transform: rotate(0deg) translate(-50%, -50%);
+    }
+    40% {
+      padding-top: -20%;
+      transform: rotate(20deg) translate(-50%, -50%);
+    }
+    60% {
+      padding-top: -20%;
+      transform: rotate(-20deg) translate(-50%, -50%);
+    }
+    80% {
+      padding-top: -10%;
+      transform: rotate(0deg) translate(-50%, -50%);
+    }
+    100% {
+      padding-top: 0%;
+      padding-left: 70%;
+      transform: rotate(0deg) translate(-50%, -50%);
+    }
+  }
+
+  .flyingOxy p:nth-child(4) {
+    padding-top: 40%;
+    text-align: right;
+    padding-right: 30%;
+  }
+
+  .flyingOxy p:nth-child(5) {
+    padding-top: 0%;
+    text-align: right;
   }
 
   .video02 {
     flex-basis: 50%;
     /* background-color: rgb(250, 250, 146); */
-    width: 80%;
-    margin-left: 5%;
-    margin-right: 10%;
+    width: 74%;
+    margin-left: 13%;
+    margin-right: 13%;
   }
 
   .videoTitle02 h1 {
@@ -1312,7 +2140,9 @@ font-family: 'Open Sans', sans-serif;
     text-align: center;
     font-family: "Raleway", sans-serif;
     font-size: 14px;
-    padding: 10px 0 10px 0;
+    padding: 10px 0 30px 0;
+    background-color: #fff;
+    box-shadow: 5px 5px 5px rgb(209, 209, 209);
   }
 
   /* ---------------/s2---------------- */
@@ -1322,59 +2152,224 @@ font-family: 'Open Sans', sans-serif;
   .workshopsContainer {
     display: flex;
     flex-direction: column;
-    background-color: pink;
-    height: 100vh;
+    /* background-color: rgb(250, 217, 222); */
+    height: 200vh;
   }
 
   .futureWorkshops {
-    background-color: rgb(101, 170, 101);
-    flex-basis: 50vh;
+    /* background-color: rgb(248, 152, 168); */
+    flex-basis: 100vh;
   }
 
   .o2 {
-    background-color: rgb(223, 212, 214);
+    position: relative;
+    background-color: rgb(96, 199, 199);
+    margin: 0 auto;
+    margin-top: 18vh;
+    margin-bottom: 2vh;
     font-family: "Raleway", sans-serif;
     font-size: 14px;
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    color: white;
     transition: 0.3s linear;
-    width: 80%;
-    margin-left: 5%;
-    margin-right: 10%;
-    margin-top: 10px;
   }
 
-  .o2.active {
-    padding-left: 85px;
+  /* .o2.active {
+
+  } */
+
+  .o2::after {
+    position: absolute;
+    bottom: -10%;
+    right: 5%;
+    display: block;
+    content: "2";
+    font-size: 42px;
+    color: rgb(155, 205, 209);
+    font-family: "Meddon", cursive;
   }
 
   .o2 h1 {
-    padding-bottom: 15px;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .o2 p {
+    position: absolute;
+    display: block;
+    width: 80%;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 13px;
+    text-align: center;
   }
 
   .pastWorkshops {
-    background-color: rgb(191, 191, 251);
-    flex-basis: 50vh;
+    /* background-color: rgb(226, 144, 157); */
+    flex-basis: 100vh;
   }
 
   .co2 {
-    background-color: rgb(223, 212, 214);
+    position: relative;
+    background-color: rgb(92, 116, 133);
+    margin: 0 auto;
+    margin-top: 18vh;
+    margin-bottom: 2vh;
     font-family: "Raleway", sans-serif;
     font-size: 14px;
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
     transition: 0.3s linear;
-    width: 80%;
-    margin-left: 5%;
-    margin-right: 10%;
-    margin-top: 10px;
   }
 
-  .co2.active {
-    padding-left: 85px;
+  .co2::after {
+    position: absolute;
+    bottom: 38%;
+    right: -13%;
+    display: block;
+    content: "2";
+    transform: rotate(15deg);
+    font-size: 42px;
+    color: rgb(92, 116, 133);
+    font-family: "Meddon", cursive;
+  }
+
+  .co2::before {
+    position: absolute;
+    bottom: 42%;
+    right: 71%;
+    display: block;
+    content: "C";
+    font-size: 80px;
+    color: rgb(224, 224, 224);
+    font-family: "Meddon", cursive;
+    transform: rotate(15deg);
   }
 
   .co2 h1 {
-    padding-bottom: 15px;
+    position: absolute;
+    top: 16%;
+    left: 31%;
+    transform: translate(-50%, 0%);
+    font-size: 20px;
+    text-align: center;
+    color: rgb(224, 224, 224);
+    transform: rotate(15deg);
+  }
+
+  .co2 p {
+    position: absolute;
+    display: block;
+    width: 80%;
+    top: 42%;
+    left: 7%;
+    transform: translate(-50%, -50%);
+    font-size: 13px;
+    text-align: center;
+    color: white;
+    transform: rotate(15deg);
   }
 
   /* -----------------/s3----------------- */
+
+  /* ------------------s04c------------------- */
+
+  .s04c div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .s04c div h1 {
+    color: rgba(53, 53, 53, 0.835);
+    font-size: 32px;
+  }
+
+  /* -----------------/s04c------------------- */
+
+  /* -------------------s4-------------------- */
+
+  .contactContainer {
+    display: flex;
+    flex-direction: row;
+    /* background-color: rgb(243, 95, 122); */
+    height: calc(100vh - 72px);
+    transition: 0.3s linear;
+  }
+
+  .contactContainer.active {
+    padding-left: 80px;
+  }
+
+  .contactForm {
+    height: 100%;
+    /* background-color: rgb(223, 204, 204); */
+    width: 60%;
+  }
+
+  .contactForm div {
+    /* background-color: rgb(241, 153, 167); */
+    margin: 15px auto;
+    width: 90%;
+    height: 100%;
+  }
+
+  .contactForm div input {
+    width: 100%;
+    height: 35px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .contactForm div textarea {
+    width: 100%;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-family: "Raleway", sans-serif;
+  }
+
+  .btnForm {
+    width: 100%;
+    height: 35px;
+    font-size: 16px;
+  }
+
+  .socialMedia {
+    height: 100%;
+    /* background-color: rgb(170, 163, 233); */
+    width: 50%;
+  }
+
+  .socialMedia div {
+    /* background-color: rgb(128, 245, 173); */
+    margin: 0 auto;
+    margin-top: 40%;
+    width: 80%;
+    height: 50%;
+  }
+
+  .socialMedia div p {
+    font-size: 16px;
+    font-family: "Raleway", sans-serif;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  .fa-facebook-square,
+  .fa-envelope-square,
+  .fa-phone-square-alt {
+    font-size: 25px;
+  }
 
   .webDescriptionMobile p {
     position: absolute;
@@ -1386,9 +2381,29 @@ font-family: 'Open Sans', sans-serif;
     font-family: "Raleway", sans-serif;
     text-decoration: none;
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
     padding: 20px;
   }
+
+  /* .webDescriptionMobile.active {
+    margin-left: 30px;
+  } */
+
+  /* ------------------/s4------------------ */
+
+  /* .webDescriptionMobile p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    background-color: rgb(59, 59, 59);
+    font-family: "Raleway", sans-serif;
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+    padding: 20px;
+  } */
 
   /* .animation {
     position: fixed;
@@ -1427,7 +2442,7 @@ font-family: 'Open Sans', sans-serif;
     font-size: 40px;
     font-family: arial;
     border-radius: 50%;
-    border: 1px solid rgb(99, 99, 99);
+    border: 1px solid rgb(190, 190, 190);
     /* background-color: rgb(255, 255, 255); */
     width: 45px;
     height: 45px;
@@ -1610,25 +2625,48 @@ font-family: 'Open Sans', sans-serif;
 
   /* --------sections-------------- */
 
-  .s1 {
+  .s01a {
     position: relative;
     margin-top: 100vh;
     min-height: 100vh;
-    background-color: rgb(255, 255, 255);
+    background-color: #4f6261;
+    z-index: 2;
+  }
+
+  .s1 {
+    position: relative;
+    /* margin-top: 100vh; */
+    min-height: 100vh;
+    background-color: rgb(249, 249, 249);
+    z-index: 2;
+  }
+
+  .s02b {
+    position: relative;
+    min-height: 100vh;
+    background-color: #337c7b;
     z-index: 2;
   }
 
   .s2 {
     position: relative;
     min-height: 100vh;
-    background-color: rgb(255, 255, 255);
+    /* background-color: #2b7a78; */
+    background-color: rgb(248, 248, 248);
     z-index: 2;
   }
 
   .s3 {
     position: relative;
     min-height: 100vh;
-    background-color: rgb(92, 139, 153);
+    background-color: rgb(18, 161, 161);
+    z-index: 2;
+  }
+
+  .s04c {
+    position: relative;
+    min-height: 100vh;
+    background-color: rgb(249, 249, 249);
     z-index: 2;
   }
 
@@ -1639,20 +2677,70 @@ font-family: 'Open Sans', sans-serif;
     z-index: 2;
   }
 
-  .webDescriptionMobile p {
+  /* ------------------s0------------------- */
+
+  .s01a div {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    color: rgb(255, 255, 255);
-    background-color: rgb(59, 59, 59);
-    font-family: "Raleway", sans-serif;
-    text-decoration: none;
-    text-align: center;
-    font-size: 16px;
-    padding: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
-  /* ---------------s1---------------- */
+
+  .s01a div h1 {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 32px;
+    animation: blinkingTxt 5s linear infinite;
+  }
+
+  @keyframes blinkingTxt {
+    0% {
+      color: rgba(255, 255, 255, 0.5);
+    }
+    59% {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    60% {
+      color: rgba(146, 46, 46, 0.5);
+    }
+    61% {
+      color: rgba(146, 46, 46, 0.5);
+    }
+    62% {
+      color: rgba(255, 255, 255, 0.5);
+    }
+    63% {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    64% {
+      color: rgba(146, 46, 46, 0.5);
+    }
+    65% {
+      color: rgba(146, 46, 46, 0.5);
+    }
+    66% {
+      color: rgba(255, 255, 255, 0.5);
+    }
+    87% {
+      color: rgba(255, 255, 255, 0.5);
+    }
+    88% {
+      color: rgba(146, 46, 46, 0.5);
+    }
+    89% {
+      color: rgba(146, 46, 46, 0.5);
+    }
+    90% {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    100% {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  /* -----------------/s0------------------- */
 
   .aboutContainer {
     display: flex;
@@ -1742,6 +2830,22 @@ font-family: 'Open Sans', sans-serif;
   }
   /* ---------------/s1---------------- */
 
+  /* ------------------s02b------------------- */
+
+  .s02b div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .s02b div h1 {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 32px;
+  }
+
+  /* -----------------/s02b------------------- */
+
   /* ---------------s2---------------- */
 
   @media (min-width: 641px) and (max-width: 700px) {
@@ -1750,7 +2854,7 @@ font-family: 'Open Sans', sans-serif;
       flex-direction: column;
       /* background-color: pink; */
       min-width: 300px;
-      height: 150vh;
+      height: 200vh;
       transition: 0.3s linear;
     }
 
@@ -1777,7 +2881,82 @@ font-family: 'Open Sans', sans-serif;
       text-align: center;
       font-family: "Raleway", sans-serif;
       font-size: 14px;
-      padding: 10px 0 30px 0;
+      padding: 10px 10px 30px 10px;
+      background-color: #fff;
+      box-shadow: 5px 5px 5px rgb(209, 209, 209);
+    }
+
+    .flyingOxy {
+      width: 100%;
+      height: 5px;
+      /* background-color: pink; */
+    }
+
+    .flyingOxy p {
+      color: rgb(255, 255, 255);
+      /* text-shadow: 4px 4px rgb(230, 229, 229); */
+      font-weight: 700;
+      font-size: 24px;
+    }
+
+    .flyingOxy p:nth-child(1) {
+      padding-top: 10%;
+      text-align: center;
+      padding-left: 30%;
+      color: rgb(249, 249, 249);
+    }
+
+    .flyingOxy p:nth-child(2) {
+      padding-top: 0%;
+      animation: flyingOxy2 20s linear infinite;
+      color: rgb(249, 249, 249);
+    }
+
+    .flyingOxy p:nth-child(3) {
+      padding-top: 0;
+      text-align: center;
+      animation: flyingOxy3 20s linear infinite;
+    }
+
+    @keyframes flyingOxy3 {
+      0% {
+        padding-top: 10%;
+        padding-left: 70%;
+        text-align: center;
+        transform: rotate(0deg) translate(-50%, -50%);
+      }
+      20% {
+        padding-top: 20%;
+        transform: rotate(0deg) translate(-50%, -50%);
+      }
+      40% {
+        padding-top: 10%;
+        transform: rotate(20deg) translate(-50%, -50%);
+      }
+      60% {
+        padding-top: 20%;
+        transform: rotate(-20deg) translate(-50%, -50%);
+      }
+      80% {
+        padding-top: 30%;
+        transform: rotate(0deg) translate(-50%, -50%);
+      }
+      100% {
+        padding-top: 10%;
+        padding-left: 70%;
+        transform: rotate(0deg) translate(-50%, -50%);
+      }
+    }
+
+    .flyingOxy p:nth-child(4) {
+      padding-top: 40%;
+      text-align: right;
+      padding-right: 30%;
+    }
+
+    .flyingOxy p:nth-child(5) {
+      padding-top: 0%;
+      text-align: right;
     }
 
     .video02 {
@@ -1798,7 +2977,9 @@ font-family: 'Open Sans', sans-serif;
       text-align: center;
       font-family: "Raleway", sans-serif;
       font-size: 14px;
-      padding: 10px 0 10px 0;
+      padding: 10px 10px 30px 10px;
+      background-color: #fff;
+      box-shadow: 5px 5px 5px rgb(209, 209, 209);
     }
 
     /* ------------------s3----------------- */
@@ -1806,50 +2987,129 @@ font-family: 'Open Sans', sans-serif;
     .workshopsContainer {
       display: flex;
       flex-direction: column;
-      background-color: pink;
-      height: 100vh;
+      /* background-color: rgb(250, 217, 222); */
+      height: 110vh;
     }
 
     .futureWorkshops {
-      background-color: rgb(101, 170, 101);
-      flex-basis: 50vh;
+      /* background-color: rgb(248, 152, 168); */
+      flex-basis: 59vh;
     }
 
     .o2 {
-      background-color: rgb(223, 212, 214);
-      width: 80%;
-      margin: 0 auto;
-      margin-top: 22vh;
+      position: relative;
+      background-color: rgb(96, 199, 199);
+      margin-left: 43%;
+      margin-top: 8vh;
       margin-bottom: 2vh;
       font-family: "Raleway", sans-serif;
-      font-size: 14px;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
       transition: 0.3s linear;
+      color: white;
     }
 
-    /* .o2.active {
+    .o2.active {
       margin-top: 22vh;
-    } */
+    }
+
+    .o2::after {
+      position: absolute;
+      bottom: -10%;
+      right: 5%;
+      display: block;
+      content: "2";
+      font-size: 42px;
+      color: rgb(155, 205, 209);
+      font-family: "Meddon", cursive;
+    }
 
     .o2 h1 {
-      padding-bottom: 15px;
+      position: absolute;
+      top: 8%;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      font-size: 24px;
+      text-align: center;
+    }
+
+    .o2 p {
+      position: absolute;
+      display: block;
+      width: 80%;
+      top: 57%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 16px;
+      text-align: center;
     }
 
     .pastWorkshops {
-      background-color: rgb(191, 191, 251);
-      flex-basis: 50vh;
+      /* background-color: rgb(226, 144, 157); */
+      flex-basis: 41vh;
     }
 
     .co2 {
-      background-color: pink;
-      width: 80%;
-      margin: 8vh auto;
-      margin-bottom: 2vh;
+      position: relative;
+      background-color: rgb(92, 116, 133);
+      margin-left: 15%;
+      margin-top: 0vh;
+      margin-bottom: 1vh;
       font-family: "Raleway", sans-serif;
       font-size: 14px;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      transition: 0.3s linear;
+    }
+
+    .co2::after {
+      position: absolute;
+      bottom: -10%;
+      right: 5%;
+      display: block;
+      content: "2";
+      /* transform: rotate(15deg); */
+      font-size: 42px;
+      color: rgb(224, 224, 224);
+      font-family: "Meddon", cursive;
+    }
+
+    .co2::before {
+      position: absolute;
+      bottom: 35%;
+      right: 79%;
+      display: block;
+      content: "C";
+      font-size: 90px;
+      color: rgb(224, 224, 224);
+      font-family: "Meddon", cursive;
+      /* transform: rotate(15deg); */
     }
 
     .co2 h1 {
-      padding-bottom: 15px;
+      position: absolute;
+      top: 13%;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      font-size: 24px;
+      text-align: center;
+      color: rgb(224, 224, 224);
+      /* transform: rotate(15deg); */
+    }
+
+    .co2 p {
+      position: absolute;
+      display: block;
+      width: 80%;
+      top: 57%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 16px;
+      text-align: center;
+      color: white;
+      /* transform: rotate(15deg); */
     }
 
     /* -----------------/s3----------------- */
@@ -1870,12 +3130,12 @@ font-family: 'Open Sans', sans-serif;
     .podcastsContainer.active {
       padding-top: 40vh;
       min-height: 100vh;
-      background-color: hotpink;
+      /* background-color: hotpink; */
     }
 
     .video01 {
       flex-basis: 50%;
-      background-color: rgb(251, 251, 182);
+      /* background-color: rgb(251, 251, 182); */
       width: 90%;
       margin-left: 5%;
       margin-right: 5%;
@@ -1883,7 +3143,7 @@ font-family: 'Open Sans', sans-serif;
 
     .video01 div {
       float: right;
-      background-color: grey;
+      /* background-color: grey; */
     }
 
     .videoTitle01 h1 {
@@ -1898,7 +3158,6 @@ font-family: 'Open Sans', sans-serif;
     }
 
     .videoDescription01 {
-      background-color: #fff;
       width: 39%;
     }
 
@@ -1906,14 +3165,88 @@ font-family: 'Open Sans', sans-serif;
       text-align: center;
       font-family: "Raleway", sans-serif;
       font-size: 15px;
-      padding: 50px 10px 20px 10px;
+      padding: 70px 30px 70px 30px;
+      margin-left: 20%;
+      background-color: #fff;
+      box-shadow: 5px 5px 5px rgb(209, 209, 209);
     }
 
-    /* -------------------  */
+    .flyingOxy {
+      width: 100%;
+      height: 5px;
+      /* background-color: pink; */
+    }
+
+    .flyingOxy p {
+      color: rgb(255, 255, 255);
+      /* text-shadow: 4px 4px rgb(230, 229, 229); */
+      font-weight: 700;
+      font-size: 24px;
+    }
+
+    .flyingOxy p:nth-child(1) {
+      padding-top: 10%;
+      text-align: center;
+      padding-left: 30%;
+      color: rgb(249, 249, 249);
+    }
+
+    .flyingOxy p:nth-child(2) {
+      padding-top: 0%;
+      animation: flyingOxy2 20s linear infinite;
+      color: rgb(249, 249, 249);
+    }
+
+    .flyingOxy p:nth-child(3) {
+      padding-top: 0;
+      text-align: center;
+      animation: flyingOxy3 20s linear infinite;
+    }
+
+    @keyframes flyingOxy3 {
+      0% {
+        padding-top: 10%;
+        padding-left: 70%;
+        text-align: center;
+        transform: rotate(0deg) translate(-50%, -50%);
+      }
+      20% {
+        padding-top: 20%;
+        transform: rotate(0deg) translate(-50%, -50%);
+      }
+      40% {
+        padding-top: 10%;
+        transform: rotate(20deg) translate(-50%, -50%);
+      }
+      60% {
+        padding-top: 20%;
+        transform: rotate(-20deg) translate(-50%, -50%);
+      }
+      80% {
+        padding-top: 30%;
+        transform: rotate(0deg) translate(-50%, -50%);
+      }
+      100% {
+        padding-top: 10%;
+        padding-left: 70%;
+        transform: rotate(0deg) translate(-50%, -50%);
+      }
+    }
+
+    .flyingOxy p:nth-child(4) {
+      padding-top: 40%;
+      text-align: right;
+      padding-right: 30%;
+    }
+
+    .flyingOxy p:nth-child(5) {
+      padding-top: 0%;
+      text-align: right;
+    }
 
     .video02 {
       flex-basis: 50%;
-      background-color: rgb(251, 251, 182);
+      /* background-color: rgb(251, 251, 182); */
       width: 90%;
       margin-left: 5%;
       margin-right: 5%;
@@ -1922,7 +3255,7 @@ font-family: 'Open Sans', sans-serif;
 
     .video02 div {
       float: left;
-      background-color: grey;
+      /* background-color: grey; */
     }
 
     .videoTitle02 h1 {
@@ -1937,7 +3270,6 @@ font-family: 'Open Sans', sans-serif;
     }
 
     .videoDescription02 {
-      background-color: #fff;
       width: 39%;
     }
 
@@ -1945,7 +3277,10 @@ font-family: 'Open Sans', sans-serif;
       text-align: center;
       font-family: "Raleway", sans-serif;
       font-size: 15px;
-      padding: 50px 10px 20px 10px;
+      padding: 70px 30px 70px 30px;
+      margin-right: 20%;
+      background-color: #fff;
+      box-shadow: 5px 5px 5px rgb(209, 209, 209);
     }
 
     /* .video02 {
@@ -1977,54 +3312,245 @@ font-family: 'Open Sans', sans-serif;
   .workshopsContainer {
     display: flex;
     flex-direction: column;
-    background-color: pink;
-    height: 100vh;
+    /* background-color: rgb(250, 217, 222); */
+    height: 110vh;
   }
 
   .futureWorkshops {
-    background-color: rgb(101, 170, 101);
-    flex-basis: 50vh;
+    /* background-color: rgb(248, 152, 168); */
+    flex-basis: 59vh;
   }
 
   .o2 {
-    background-color: rgb(223, 212, 214);
-    width: 42%;
-    margin-left: 7%;
-    margin-top: 30vh;
+    position: relative;
+    background-color: rgb(96, 199, 199);
+    margin-left: 48%;
+    margin-top: 14vh;
     margin-bottom: 2vh;
     font-family: "Raleway", sans-serif;
-    font-size: 16px;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
     transition: 0.3s linear;
+    color: white;
   }
 
-  /* .o2.active {
-    margin-top: 22vh;
-  } */
+  .o2.active {
+    margin-top: 21vh;
+  }
+
+  .o2::after {
+    position: absolute;
+    bottom: -10%;
+    right: 5%;
+    display: block;
+    content: "2";
+    font-size: 42px;
+    color: rgb(155, 205, 209);
+    font-family: "Meddon", cursive;
+  }
 
   .o2 h1 {
-    padding-bottom: 15px;
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .o2 p {
+    position: absolute;
+    display: block;
+    width: 80%;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    text-align: center;
   }
 
   .pastWorkshops {
-    background-color: rgb(191, 191, 251);
-    flex-basis: 50vh;
+    /* background-color: rgb(226, 144, 157); */
+    flex-basis: 41vh;
   }
 
   .co2 {
-    background-color: pink;
-    width: 42%;
-    margin-left: 7%;
-    margin-top: 5%;
-    margin-bottom: 2vh;
+    position: relative;
+    background-color: rgb(92, 116, 133);
+    margin-left: 15%;
+    margin-top: 0vh;
+    margin-bottom: 1vh;
     font-family: "Raleway", sans-serif;
-    font-size: 16px;
+    font-size: 14px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    transition: 0.3s linear;
+  }
+
+  .co2::after {
+    position: absolute;
+    bottom: -10%;
+    right: 5%;
+    display: block;
+    content: "2";
+    /* transform: rotate(15deg); */
+    font-size: 42px;
+    color: rgb(224, 224, 224);
+    font-family: "Meddon", cursive;
+  }
+
+  .co2::before {
+    position: absolute;
+    bottom: 35%;
+    right: 79%;
+    display: block;
+    content: "C";
+    font-size: 90px;
+    color: rgb(224, 224, 224);
+    font-family: "Meddon", cursive;
+    /* transform: rotate(15deg); */
   }
 
   .co2 h1 {
-    padding-bottom: 15px;
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-size: 24px;
+    text-align: center;
+    color: rgb(224, 224, 224);
+    /* transform: rotate(15deg); */
+  }
+
+  .co2 p {
+    position: absolute;
+    display: block;
+    width: 80%;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    /* transform: rotate(15deg); */
   }
 
   /* -----------------/s3----------------- */
+
+  /* ------------------s04c------------------- */
+
+  .s04c div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .s04c div h1 {
+    color: rgba(53, 53, 53, 0.835);
+    font-size: 32px;
+  }
+
+  /* -----------------/s04c------------------- */
+
+  /* -------------------s4-------------------- */
+
+  .contactContainer {
+    display: flex;
+    flex-direction: row;
+    /* background-color: rgb(243, 95, 122); */
+    height: calc(100vh - 72px);
+    transition: 0.3s linear;
+  }
+
+  .contactContainer.active {
+    padding-top: 17vh;
+  }
+
+  .contactForm {
+    height: 100%;
+    /* background-color: rgb(223, 204, 204); */
+    width: 60%;
+  }
+
+  .contactForm div {
+    /* background-color: rgb(241, 153, 167); */
+    margin: 0 auto;
+    width: 80%;
+    height: 50%;
+    margin-top: 35%;
+  }
+
+  .contactForm div input {
+    width: 100%;
+    height: 35px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .contactForm div textarea {
+    width: 100%;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-family: "Raleway", sans-serif;
+  }
+
+  .btnForm {
+    width: 100%;
+    height: 35px;
+    font-size: 16px;
+  }
+
+  .socialMedia {
+    height: 100%;
+    /* background-color: rgb(170, 163, 233); */
+    width: 50%;
+  }
+
+  .socialMedia div {
+    /* background-color: rgb(128, 245, 173); */
+    margin: 0 auto;
+    margin-top: 40%;
+    width: 80%;
+    height: 30%;
+    padding-top: 50px;
+  }
+
+  .socialMedia div p {
+    font-size: 16px;
+    font-family: "Raleway", sans-serif;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  .fa-facebook-square,
+  .fa-envelope-square,
+  .fa-phone-square-alt {
+    font-size: 25px;
+  }
+
+  .webDescriptionMobile p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    background-color: rgb(59, 59, 59);
+    font-family: "Raleway", sans-serif;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+    padding: 20px;
+  }
+
+  /* .webDescriptionMobile.active {
+  margin-left: 30px;
+} */
+
+  /* ------------------/s4------------------ */
 }
 
 @media (min-width: 1025px) {
@@ -2035,19 +3561,19 @@ font-family: 'Open Sans', sans-serif;
     min-width: 300px;
     min-height: 100vh;
     transition: 0.3s linear;
-    padding-top: 32vh;
+    padding-top: 27vh;
     padding-bottom: 25vh;
   }
 
   .podcastsContainer.active {
-    padding-top: 40vh;
+    padding-top: 30vh;
     min-height: 100vh;
-    background-color: hotpink;
+    /* background-color: hotpink; */
   }
 
   .video01 {
     flex-basis: 50%;
-    background-color: rgb(251, 251, 182);
+    /* background-color: rgb(251, 251, 182); */
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
@@ -2055,7 +3581,8 @@ font-family: 'Open Sans', sans-serif;
 
   .video01 div {
     float: right;
-    background-color: grey;
+    /* background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 5px rgb(209, 209, 209); */
   }
 
   .videoTitle01 h1 {
@@ -2071,19 +3598,96 @@ font-family: 'Open Sans', sans-serif;
 
   .videoDescription01 {
     background-color: #fff;
-    width: 49%;
+    width: 30%;
+    margin-left: 9%;
+    margin-right: 10%;
   }
 
   .videoDescription01 p {
     text-align: center;
     font-family: "Raleway", sans-serif;
     font-size: 18px;
-    padding: 40px 20px 40px 20px;
+    padding: 83px 40px 83px 40px;
+    background-color: #fff;
+    box-shadow: 5px 5px 5px rgb(209, 209, 209);
+  }
+
+  .flyingOxy {
+    width: 100%;
+    height: 5px;
+    /* background-color: pink; */
+  }
+
+  .flyingOxy p {
+    color: rgb(255, 255, 255);
+    /* text-shadow: 4px 4px rgb(230, 229, 229); */
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  .flyingOxy p:nth-child(1) {
+    padding-top: 10%;
+    text-align: center;
+    padding-left: 30%;
+    color: rgb(249, 249, 249);
+  }
+
+  .flyingOxy p:nth-child(2) {
+    padding-top: 0%;
+    animation: flyingOxy2 20s linear infinite;
+    color: rgb(249, 249, 249);
+  }
+
+  .flyingOxy p:nth-child(3) {
+    padding-top: 0;
+    text-align: center;
+    animation: flyingOxy3 20s linear infinite;
+  }
+
+  @keyframes flyingOxy3 {
+    0% {
+      padding-top: 10%;
+      padding-left: 70%;
+      text-align: center;
+      transform: rotate(0deg) translate(-50%, -50%);
+    }
+    20% {
+      padding-top: 20%;
+      transform: rotate(0deg) translate(-50%, -50%);
+    }
+    40% {
+      padding-top: 10%;
+      transform: rotate(20deg) translate(-50%, -50%);
+    }
+    60% {
+      padding-top: 20%;
+      transform: rotate(-20deg) translate(-50%, -50%);
+    }
+    80% {
+      padding-top: 30%;
+      transform: rotate(0deg) translate(-50%, -50%);
+    }
+    100% {
+      padding-top: 10%;
+      padding-left: 70%;
+      transform: rotate(0deg) translate(-50%, -50%);
+    }
+  }
+
+  .flyingOxy p:nth-child(4) {
+    padding-top: 40%;
+    text-align: right;
+    padding-right: 30%;
+  }
+
+  .flyingOxy p:nth-child(5) {
+    padding-top: 0%;
+    text-align: right;
   }
 
   .video02 {
     flex-basis: 50%;
-    background-color: rgb(251, 251, 182);
+    /* background-color: rgb(251, 251, 182); */
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
@@ -2092,7 +3696,7 @@ font-family: 'Open Sans', sans-serif;
 
   .video02 div {
     float: left;
-    background-color: grey;
+    /* background-color: grey; */
   }
 
   .videoTitle02 h1 {
@@ -2108,90 +3712,258 @@ font-family: 'Open Sans', sans-serif;
 
   .videoDescription02 {
     background-color: #fff;
-    width: 49%;
+    width: 30%;
+    margin-left: 10%;
+    margin-right: 9%;
   }
 
   .videoDescription02 p {
     text-align: center;
     font-family: "Raleway", sans-serif;
     font-size: 18px;
-    padding: 40px 20px 40px 20px;
+    padding: 83px 40px 83px 40px;
+    background-color: #fff;
+    box-shadow: 5px 5px 5px rgb(209, 209, 209);
   }
 
   /* ------------------s3----------------- */
 
   .workshopsContainer {
     display: flex;
-    flex-direction: row;
-    background-color: pink;
+    flex-direction: row-reverse;
+    /* background-color: rgb(250, 217, 222); */
     height: 100vh;
   }
 
   .futureWorkshops {
-    background-color: rgb(101, 170, 101);
+    /* background-color: rgb(248, 152, 168); */
     flex-basis: 50vw;
   }
 
   .o2 {
-    background-color: rgb(223, 212, 214);
-    width: 60%;
-    margin: 0 auto;
-    margin-top: 45vh;
+    position: relative;
+    background-color: rgb(96, 199, 199);
+    margin-left: 5%;
+    margin-top: 20vh;
     margin-bottom: 2vh;
     font-family: "Raleway", sans-serif;
-    font-size: 16px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
     transition: 0.3s linear;
+    color: white;
   }
 
-  /* .o2.active {
+  .o2.active {
     margin-top: 22vh;
-  } */
+  }
+
+  .o2::after {
+    position: absolute;
+    bottom: -10%;
+    right: 5%;
+    display: block;
+    content: "2";
+    font-size: 42px;
+    color: rgb(155, 205, 209);
+    font-family: "Meddon", cursive;
+  }
 
   .o2 h1 {
-    padding-left: 30px;
-    padding-bottom: 15px;
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-size: 24px;
+    text-align: center;
   }
 
   .o2 p {
-    padding-left: 30px;
+    position: absolute;
+    display: block;
+    width: 80%;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    text-align: center;
   }
 
   .pastWorkshops {
-    background-color: rgb(191, 191, 251);
+    /* background-color: rgb(226, 144, 157); */
     flex-basis: 50vw;
   }
 
   .co2 {
-    background-color: rgb(223, 212, 214);
-    width: 60%;
-    margin: 0 auto;
-    margin-top: 45vh;
-    margin-bottom: 2vh;
+    position: relative;
+    background-color: rgb(92, 116, 133);
+    margin-left: 40%;
+    margin-top: 50%;
+    margin-bottom: 1vh;
     font-family: "Raleway", sans-serif;
-    font-size: 16px;
+    font-size: 14px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
     transition: 0.3s linear;
   }
 
+  .co2::after {
+    position: absolute;
+    bottom: -10%;
+    right: 5%;
+    display: block;
+    content: "2";
+    /* transform: rotate(15deg); */
+    font-size: 42px;
+    color: rgb(224, 224, 224);
+    font-family: "Meddon", cursive;
+  }
+
+  .co2::before {
+    position: absolute;
+    bottom: 35%;
+    right: 79%;
+    display: block;
+    content: "C";
+    font-size: 90px;
+    color: rgb(224, 224, 224);
+    font-family: "Meddon", cursive;
+    /* transform: rotate(15deg); */
+  }
+
   .co2 h1 {
-    padding-bottom: 15px;
-    padding-right: 30px8;
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-size: 24px;
+    text-align: center;
+    color: rgb(224, 224, 224);
+    /* transform: rotate(15deg); */
   }
 
   .co2 p {
-    padding-right: 30px;
+    position: absolute;
+    display: block;
+    width: 80%;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    /* transform: rotate(15deg); */
   }
 
   /* -----------------/s3----------------- */
+
+  /* -------------------s4-------------------- */
+
+  .contactContainer {
+    display: flex;
+    flex-direction: row;
+    /* background-color: rgb(243, 95, 122); */
+    height: calc(100vh - 72px);
+    transition: 0.3s linear;
+  }
+
+  .contactContainer.active {
+    padding-top: 17vh;
+  }
+
+  .contactForm {
+    height: 100%;
+    /* background-color: rgb(223, 204, 204); */
+    width: 60%;
+  }
+
+  .contactForm div {
+    /* background-color: rgb(241, 153, 167); */
+    margin: 0 auto;
+    width: 60%;
+    height: 50%;
+    margin-top: 20%;
+  }
+
+  .contactForm div input {
+    width: 100%;
+    height: 35px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .contactForm div textarea {
+    width: 100%;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-family: "Raleway", sans-serif;
+  }
+
+  .btnForm {
+    width: 100%;
+    height: 35px;
+    font-size: 16px;
+  }
+
+  .socialMedia {
+    height: 100%;
+    /* background-color: rgb(170, 163, 233); */
+    width: 50%;
+  }
+
+  .socialMedia div {
+    /* background-color: rgb(128, 245, 173); */
+    margin: 0 auto;
+    margin-top: 30%;
+    width: 50%;
+    height: 30%;
+    padding-top: 40px;
+  }
+
+  .socialMedia div p {
+    font-size: 16px;
+    font-family: "Raleway", sans-serif;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  .fa-facebook-square,
+  .fa-envelope-square,
+  .fa-phone-square-alt {
+    font-size: 25px;
+  }
+
+  .webDescriptionMobile p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    background-color: rgb(59, 59, 59);
+    font-family: "Raleway", sans-serif;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+    padding: 20px;
+  }
+
+  /* .webDescriptionMobile.active {
+  margin-left: 30px;
+} */
+
+  /* ------------------/s4------------------ */
 }
 
 /* ---------------FOOTER---------------- */
 
-.webDescription p {
-  /* display: none;
+/* .webDescription p {
+  display: none;
   position: fixed;
   bottom: 0;
   left: 0; */
-  width: 100%;
+/* width: 100%;
   color: rgb(255, 255, 255);
   background-color: rgba(214, 214, 214, 0.9);
   font-family: "Raleway", sans-serif;
@@ -2200,7 +3972,7 @@ font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   padding: 20px;
   margin-top: calc(100vh - 76px);
-}
+} */
 
 /* -----------------Part_2----------------- */
 
