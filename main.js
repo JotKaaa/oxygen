@@ -1,3 +1,5 @@
+// --------typing: word 'discrimination'------------
+
 const discriminationTxtSpan = document.querySelector(".discrimination");
 const discriminationTxt = `discrimination?`;
 let discriminationIndexTxt = 0;
@@ -13,22 +15,7 @@ const discriminationAddLetter = () => {
 
 const indexTyping = setInterval(discriminationAddLetter, 100);
 
-// -------------------------------COLORFUL BG-----------------------------------------
-
-// document.body.addEventListener("mousemove", function (event) {
-//   const x = event.clientX + 1;
-//   const y = event.clientY + 1;
-//   const width = window.innerWidth;
-//   const height = window.innerHeight;
-
-//   const red = (x / width) * 100;
-//   const green = (y / height) * 100;
-//   const blue = ((x / width) * 100 + (y / height) * 100) / 2;
-
-//   document.body.style.backgroundColor = `rgba(${red}%, ${green}%, ${blue}%, 9%)`;
-// });
-
-// -----------------Menu mobile--------------------
+// -------------------menu mobile--------------------
 
 const burger = document.querySelector(".burger");
 const aboutContainer = document.querySelector(".aboutContainer");
@@ -37,6 +24,10 @@ const o2 = document.querySelector(".o2");
 const co2 = document.querySelector(".co2");
 const contactContainer = document.querySelector(".contactContainer");
 const webDescriptionMobile = document.querySelector(".webDescriptionMobile");
+const helpBreath = document.querySelector(".helpBreath");
+const helpBreath02 = document.querySelector(".helpBreath02");
+const workshopsContainer = document.querySelector(".workshopsContainer");
+const contactUs = document.querySelector(".contactUs");
 
 burger.addEventListener("click", function () {
   burger.classList.toggle("active");
@@ -46,13 +37,15 @@ burger.addEventListener("click", function () {
   co2.classList.toggle("active");
   contactContainer.classList.toggle("active");
   webDescriptionMobile.classList.toggle("active");
+  helpBreath.classList.toggle("active");
+  helpBreath02.classList.toggle("active");
+  workshopsContainer.classList.toggle("active");
+  contactUs.classList.toggle("active");
 });
 
-// --------------footer mobile landscape -------------
+// --------------------nav slider--------------------
 
-// ---------------Nav Slider -----------------
-
-$(".aboutMobile").on("click", function () {
+$(".about").on("click", function () {
   $("body, html").animate(
     {
       scrollTop: $(".s1").offset().top,
@@ -61,7 +54,7 @@ $(".aboutMobile").on("click", function () {
   );
 });
 
-$(".podcastsMobile").on("click", function () {
+$(".podcasts").on("click", function () {
   $("body, html").animate(
     {
       scrollTop: $(".s2").offset().top,
@@ -70,7 +63,7 @@ $(".podcastsMobile").on("click", function () {
   );
 });
 
-$(".workshopsMobile").on("click", function () {
+$(".workshops").on("click", function () {
   $("body, html").animate(
     {
       scrollTop: $(".s3").offset().top,
@@ -79,11 +72,21 @@ $(".workshopsMobile").on("click", function () {
   );
 });
 
-$(".contactMobile").on("click", function () {
+$(".contact").on("click", function () {
   $("body, html").animate(
     {
       scrollTop: $(".s4").offset().top,
     },
     1000
   );
+});
+
+// --------------------myCursor-------------------
+
+var myCursor = document.getElementById("myCursor");
+document.addEventListener("mousemove", function (e) {
+  var x = e.clientX;
+  var y = e.clientY;
+  myCursor.style.left = x + "px";
+  myCursor.style.top = y + "px";
 });
