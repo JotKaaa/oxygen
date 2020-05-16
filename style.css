@@ -3406,7 +3406,7 @@ font-family: 'Open Sans', sans-serif;
   .s2 {
     position: relative;
     height: 100vh;
-    min-height: 1300px;
+    min-height: 1500px;
     /* background-color: #2b7a78; */
     background-color: rgb(248, 248, 248);
     z-index: 2;
@@ -4462,7 +4462,7 @@ font-family: 'Open Sans', sans-serif;
 
     .video01 {
       position: relative;
-      flex-basis: 40%;
+      flex-basis: 40vh;
       /* background-color: rgba(251, 251, 182, 0.37); */
       width: 91%;
       margin-left: 4.5%;
@@ -4523,7 +4523,7 @@ font-family: 'Open Sans', sans-serif;
     }
 
     .paper01 p {
-      padding: 130px 5px 20px 10px;
+      padding: 40px 5px 20px 10px;
       font-size: 10px;
       font-family: "Slabo 27px", serif;
       text-transform: uppercase;
@@ -4532,19 +4532,40 @@ font-family: 'Open Sans', sans-serif;
 
     .paper02 {
       position: absolute;
-      top: 82%;
-      left: 35%;
+      top: 72%;
+      left: 30%;
       width: 260px;
       height: 310px;
-      transform: rotate(50deg) translate(-50%, -50%);
+      transform: rotate(70deg) translate(-50%, -50%);
+      background-color: rgb(211, 231, 228);
+      color: rgb(170, 169, 169);
+      z-index: 0;
+      /* overflow: hidden; */
+    }
+
+    .paper02::before {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: -140%;
+      transform: translate(-50%, -50%);
+      content: "Antidiscrimination Antidiscrimination Antidiscrimination Antidiscrimination Antidiscrimination Antidiscrimination Antidiscrimination Antidiscrimination Antidiscrimination Antidiscrimination Antidiscrimination Antidiscrimination Antidiscrimination Antidiscrimination Antidiscrimination Antidiscrimination Antidiscrimination Antidiscrimination Antidiscrimination Antidiscrimination Antidiscrimination";
+      padding: 20px;
+      font-family: "Slabo 27px", serif;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-size: 12px;
+      width: 260px;
+      height: 310px;
+      transform: rotate(145deg) translate(-50%, -50%);
       background-color: rgb(211, 231, 228);
       color: rgb(170, 169, 169);
       z-index: 0;
     }
 
     .paper02 p {
-      padding: 130px 5px 20px 10px;
-      font-size: 10px;
+      padding: 11px 5px 20px 115px;
+      font-size: 12px;
       font-family: "Slabo 27px", serif;
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -4616,12 +4637,12 @@ font-family: 'Open Sans', sans-serif;
     }
 
     .video02 {
-      flex-basis: 40%;
+      flex-basis: 45vh;
       /* background-color: rgba(251, 251, 182, 0.411); */
       width: 91%;
       margin-left: 4.5%;
       z-index: 1;
-      margin-top: 16vh;
+      margin-top: 40vh;
       margin-bottom: 2vh;
     }
 
@@ -5003,28 +5024,29 @@ font-family: 'Open Sans', sans-serif;
   /* _____________s2: DESCTOP VERSION 01_________ */
 
   .podcastsContainer {
+    position: relative;
     display: flex;
     flex-direction: column;
     /* background-color: pink; */
     min-width: 300px;
-    height: 200vh;
     transition: 0.3s linear;
-    padding-top: 27vh;
+    padding-top: 35vh;
     padding-bottom: 25vh;
   }
 
   .podcastsContainer.active {
-    padding-top: 30vh;
+    padding-top: 37vh;
     height: 200vh;
     /* background-color: hotpink; */
   }
 
   .video01 {
     position: relative;
-    flex-basis: 40%;
+    flex-basis: 40vh;
     /* background-color: rgba(251, 251, 182, 0.37); */
-    width: 89%;
+    width: 80%;
     margin-left: 10%;
+    margin-right: 10%;
     z-index: 1;
     max-width: 1025px;
   }
@@ -5080,7 +5102,7 @@ font-family: 'Open Sans', sans-serif;
   }
 
   .paper01 p {
-    padding: 130px 5px 20px 10px;
+    padding: 40px 5px 20px 10px;
     font-size: 10px;
     font-family: "Slabo 27px", serif;
     text-transform: uppercase;
@@ -5089,19 +5111,40 @@ font-family: 'Open Sans', sans-serif;
 
   .paper02 {
     position: absolute;
-    top: 82%;
-    left: 35%;
+    top: 70%;
+    left: 30%;
     width: 260px;
     height: 310px;
-    transform: rotate(50deg) translate(-50%, -50%);
+    transform: rotate(70deg) translate(-50%, -50%);
+    background-color: rgb(211, 231, 228);
+    color: rgb(170, 169, 169);
+    z-index: 0;
+    /* overflow: hidden; */
+  }
+
+  .paper02::before {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: -140%;
+    transform: translate(-50%, -50%);
+    content: "Antidiscrimination Antidiscrimination Antidiscrimination Antidiscrimination Antidiscrimination Antidiscrimination Antidiscrimination Antidiscrimination Antidiscrimination Antidiscrimination Antidiscrimination Antidiscrimination Antidiscrimination Antidiscrimination Antidiscrimination Antidiscrimination Antidiscrimination Antidiscrimination Antidiscrimination Antidiscrimination Antidiscrimination";
+    padding: 20px;
+    font-family: "Slabo 27px", serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 12px;
+    width: 260px;
+    height: 310px;
+    transform: rotate(145deg) translate(-50%, -50%);
     background-color: rgb(211, 231, 228);
     color: rgb(170, 169, 169);
     z-index: 0;
   }
 
   .paper02 p {
-    padding: 130px 5px 20px 10px;
-    font-size: 10px;
+    padding: 11px 5px 20px 115px;
+    font-size: 12px;
     font-family: "Slabo 27px", serif;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -5126,7 +5169,7 @@ font-family: 'Open Sans', sans-serif;
   }
 
   .far.fa-circle {
-    font-size: 28px;
+    font-size: 32px;
   }
 
   .flyingOxy01 p:nth-child(1) {
@@ -5134,7 +5177,9 @@ font-family: 'Open Sans', sans-serif;
   }
 
   .flyingOxy01 p:nth-child(2) {
-    padding-right: 65%;
+    padding-left: 65%;
+    padding-top: 550px;
+    font-size: 20px;
   }
 
   .flyingOxy01 p:nth-child(3) {
@@ -5173,12 +5218,12 @@ font-family: 'Open Sans', sans-serif;
   }
 
   .video02 {
-    flex-basis: 40%;
+    flex-basis: 40vh;
     /* background-color: rgba(251, 251, 182, 0.411); */
     width: 89%;
     margin-left: 10%;
     z-index: 1;
-    margin-top: 15vh;
+    margin-top: 30vh;
     max-width: 1025px;
   }
 
@@ -5206,7 +5251,7 @@ font-family: 'Open Sans', sans-serif;
     font-family: "Raleway", sans-serif;
     font-size: 15px;
     padding: 78px 30px 78px 30px;
-    margin-right: 5%;
+    margin-right: 10%;
     background-color: #fff;
     box-shadow: 5px 5px 5px rgb(209, 209, 209);
   }
