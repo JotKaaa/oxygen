@@ -1,7 +1,7 @@
-# Website: Anti-Discrimination Trainings
+# The website I have recently been working on
 
-lorem
+As a part of my learning process, I have recently been working on the website for a friend, who is a teacher of anti-discrimination's techniques.
 
-## Draft
+## Web technologies: HTML/CSS/JavaScript
 
-<!-- Check [it](https://jotkaaa/oxygen.com) out -->
+<!-- Check [it](https://jotkaaa.github.io/oxygen/) out -->
